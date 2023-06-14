@@ -1,0 +1,9 @@
+{
+  "root": ".",
+  "pdf": {
+    "fontSize": 10
+  },
+  "plugins": [
+    "theme-tistory"
+  ]
+}
