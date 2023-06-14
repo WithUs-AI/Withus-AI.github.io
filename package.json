@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tistory/document-tistory-apis.git"
+    "url": "git+https://github.com/WithUs-AI/Withus-AI.github.io.git"
   },
   "keywords": [
     "Tistory",
@@ -22,9 +22,9 @@
   "author": "Tistory",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tistory/document-tistory-apis/issues"
+    "url": "https://github.com/WithUs-AI/Withus-AI.github.io/issues"
   },
-  "homepage": "https://github.com/tistory/document-tistory-apis#readme",
+  "homepage": "https://github.com/WithUs-AI/Withus-AI.github.io#readme",
   "dependencies": {
     "gitbook-cli": "^2.3.2",
     "gitbook-plugin-folding-chapters": "0.0.9"
