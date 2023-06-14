@@ -1,5 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
-* [Part 1](first.md)
+* [About With.AI](README.md)
+* [With.AI - PCI](first.md)
+* [With.AI - Ethernet](first.md)
 
