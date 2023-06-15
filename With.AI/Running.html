@@ -1,0 +1,402 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>실행 하기 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="RunningEnv.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="README.md">
+            
+                <span>
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="CustomModelGuide.html">
+            
+                <a href="CustomModelGuide.html">
+            
+                    
+                    AI Camera - Custom model 적용 가이드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="LearningEnv.html">
+            
+                <a href="LearningEnv.html">
+            
+                    
+                    학습 환경 구성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="CustumDataLearning.html">
+            
+                <a href="CustumDataLearning.html">
+            
+                    
+                    Custum Data 학습
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="DFC_Env.html">
+            
+                <a href="DFC_Env.html">
+            
+                    
+                    DFC 환경구성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="DFC_Tutorial.html">
+            
+                <a href="DFC_Tutorial.html">
+            
+                    
+                    DFC 튜토리얼
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="RunningEnv.html">
+            
+                <a href="RunningEnv.html">
+            
+                    
+                    실행 환경 구성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="Running.html">
+            
+                <a href="Running.html">
+            
+                    
+                    실행 하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >실행 하기</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xC2E4;&#xD589;-&#xD558;&#xAE30;">&#xC2E4;&#xD589; &#xD558;&#xAE30;</h1>
+<h2 id="&#xB77C;&#xC988;&#xBCA0;&#xB9AC;&#xD30C;&#xC774;&#xC5D0;-&#xC801;&#xC6A9;&#xD558;&#xAE30;">&#xB77C;&#xC988;&#xBCA0;&#xB9AC;&#xD30C;&#xC774;&#xC5D0; &#xC801;&#xC6A9;&#xD558;&#xAE30;</h2>
+<p>&#xC0DD;&#xC131;&#xB41C; hef &#xD30C;&#xC77C;&#xB85C; gstreamer&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xCE74;&#xBA54;&#xB77C; &#xC785;&#xB825;&#xC5D0; &#xBC14;&#xB85C; AI &#xBAA8;&#xB378; &#xC801;&#xC6A9;&#xC774; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;.
+tappas &#xC608;&#xC81C;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xC27D;&#xAC8C; &#xC81C;&#xC791;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. 
+&#xAC1C;&#xBC1C; &#xD658;&#xACBD; &#xB9AC;&#xB205;&#xC2A4;&#xC5D0; &#xCCA8;&#xBD80;&#xD30C;&#xC77C;&#xC5D0; &#xC788;&#xB294; tappas_3.23.0_linux_installer.zip &#xD30C;&#xC77C;&#xC758; &#xC555;&#xCD95;&#xC744; &#xD480;&#xC5B4;&#xC90D;&#xB2C8;&#xB2E4;. </p>
+<h3 id="tappas-&#xC774;&#xC6A9;&#xD558;&#xAE30;">Tappas &#xC774;&#xC6A9;&#xD558;&#xAE30;</h3>
+<p>tappas[version] &#xD3F4;&#xB354;&#xC758; &#xB0B4;&#xBD80;&#xC5D0;&#xB294; apps&#xB77C;&#xB294; &#xD3F4;&#xB354;&#xAC00; &#xC788;&#xB294;&#xB370; &#xD574;&#xB2F9; &#xD3F4;&#xB354;&#xAC00; Tappas &#xC608;&#xC81C;&#xAC00; &#xC788;&#xB294; &#xD3F4;&#xB354;&#xC785;&#xB2C8;&#xB2E4;. &#xB0B4;&#xBD80;&#xC5D0;&#xB294; 7&#xAC1C; &#xC815;&#xB3C4;&#xC758; &#xC608;&#xC81C; &#xD30C;&#xC77C;&#xC774; &#xC788;&#xC73C;&#xBA70; &#xD574;&#xB2F9; &#xBB38;&#xC11C;&#xC5D0;&#xC11C;&#xB294; Detection&#xC608;&#xC81C;&#xB97C; &#xC124;&#xBA85;&#xD569;&#xB2C8;&#xB2E4;.
+&#x2003;
+&#xAC01; &#xC608;&#xC81C;&#xD30C;&#xC77C;&#xC758; &#xB0B4;&#xBD80;&#xC5D0;&#xB294; gstreamer&#xBA85;&#xB839;&#xC5B4;&#xAC00; &#xC791;&#xC131;&#xB418;&#xB294; &#xC258; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xAC00; &#xC874;&#xC7AC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>./&lt;&#xC608;&#xC81C;&gt;.sh -h &#xB97C; &#xC2E4;&#xD589;&#xD558;&#xBA74; &#xD574;&#xB2F9; &#xC258; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC758; &#xC778;&#xC790; &#xAC12;&#xB4E4;&#xC774; &#xC5B4;&#xB5BB;&#xAC8C; &#xAD6C;&#xC131;&#xB418;&#xC5B4; &#xC788;&#xB294;&#xC9C0; &#xC54C; &#xC218; &#xC788;&#xACE0; 
+--print-gst-launch &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xD1B5;&#xD574; &#xD574;&#xB2F9; &#xC608;&#xC81C;&#xC758; &#xD30C;&#xC774;&#xD504;&#xB77C;&#xC778;&#xC774; &#xC5B4;&#xB5BB;&#xAC8C; &#xAD6C;&#xC131;&#xB418;&#xB294;&#xC9C0; &#xC54C; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Detection&#xC758; &#xD30C;&#xC774;&#xD504;&#xB77C;&#xC778;&#xC740; 
+gst-launch-1.0 v4l2src device=/dev/video0 ! &#x2013; &#xCE74;&#xBA54;&#xB77C; &#xC9C0;&#xC815;
+video/x-raw,format=YUY2,width=1280,height=720,framerate=30/1 ! &#x2013; Caps &#xC9C0;&#xC815; 
+(gst-device-monitor-1.0 &#xBA85;&#xB839;&#xC5B4;&#xB85C; &#xD655;&#xC778; &#xAC00;&#xB2A5;)
+queue leaky=downstream max-size-buffers=5 max-size-bytes=0 max-size-time=0 ! 
+hailonet hef-path=/home/root/apps/detection/resources/yolov5m_yuv.hef is-active=true !  </p>
+<ul>
+<li><p>hailonet&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; hef &#xBAA8;&#xB378; &#xD30C;&#xC77C;&#xC744; &#xD30C;&#xC774;&#xD504;&#xB77C;&#xC778;&#xC5D0; &#xC801;&#xC6A9;
+queue leaky=no max-size-buffers=30 max-size-bytes=0 max-size-time=0 ! 
+hailofilter function-name=yolov5 
+config-path=/home/root/apps/detection/resources/configs/yolov5.json 
+so-path=/usr/lib/hailo-post-processes/libyolo_post.so qos=false ! </p>
+</li>
+<li><p>hailofilter&#xB294; &#xBAA8;&#xB378; config&#xB0B4;&#xC6A9;&#xC774; &#xC788;&#xB294; json&#xD30C;&#xC77C;&#xACFC; &#xACB0;&#xACFC;&#xAC12;&#xC744; &#xCC98;&#xB9AC;&#xD560; post_processes &#xD30C;&#xC77C;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xC5EC; &#xD30C;&#xC774;&#xD504;&#xB77C;&#xC778;&#xC5D0; &#xC801;&#xC6A9;
+queue leaky=no max-size-buffers=30 max-size-bytes=0 max-size-time=0 ! hailooverlay ! 
+queue leaky=downstream max-size-buffers=5 max-size-bytes=0 max-size-time=0 ! 
+videoconvert ! fpsdisplaysink video-sink=autovideosink name=hailo_display sync=false text-overlay=false &#x2013; autovideosink&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xC5F0;&#xACB0;&#xB41C; LCD&#xB85C; &#xCD9C;&#xB825; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;. Rtspclientsink&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xBA74; Rtsp streaming&#xC774; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;.
+&#xC774;&#xB807;&#xAC8C; &#xAD6C;&#xC131;&#xB418;&#xC5B4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#x2003;
+Hailo Element&#xC5D0; &#xB300;&#xD55C; &#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; &#x201C;gst-inspect-1.0 [ElementName]&#x201D; &#xBA85;&#xB839;&#xC5B4;&#xB85C; &#xD655;&#xC778; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;.
+Ex) gst-inspect-1.0 | grep hailo, gst-inspect-1.0 hailonet, gst-inspect-1.0 hailofilter etc.</p>
+</li>
+</ul>
+<h4 id="post-process-&#xC791;&#xC131;">Post-process &#xC791;&#xC131;</h4>
+<p>gstreamer&#xB294; Meson &#xBE4C;&#xB4DC; &#xC2DC;&#xC2A4;&#xD15C;&#xC744; &#xC774;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;.
+Hailo tappas_v3.22.0\core\hailo\libs\postprocesses &#xACBD;&#xB85C;&#xC5D0;&#xC11C; Post Processes&#xC5D0; &#xB300;&#xD55C; &#xC18C;&#xC2A4; &#xBC0F; Meson.build &#xD30C;&#xC77C;&#xC744; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Meson.build &#xD30C;&#xC77C;&#xC744; &#xC5F4;&#xC5B4;&#xBCF4;&#xBA74; &#xAC01; &#xD3F4;&#xB354;&#xBCC4;&#xB85C; so&#xD30C;&#xC77C;&#xC744; &#xBE4C;&#xB4DC;&#xD558;&#xB294; &#xB0B4;&#xC6A9;&#xB4E4;&#xC774; &#xC801;&#xD600; &#xC788;&#xC73C;&#xBA70; &#xC801;&#xC6A9;&#xD560; &#xBAA8;&#xB378;&#xC5D0; &#xB9DE;&#xB294; Post Process&#xB97C; &#xACE8;&#xB77C;&#xC11C; &#xC218;&#xC815;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>detection &#xC608;&#xC81C;&#xC758; &#xACBD;&#xC6B0; yolo_postprocess.cpp &#xC18C;&#xC2A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;.
+&#xCEE4;&#xC2A4;&#xD140; &#xC18C;&#xC2A4;(&#xCCA8;&#xBD80;&#xB41C; my_post.cpp / my_post.hpp)&#xB294; &#xC544;&#xB798;&#xCC98;&#xB7FC; Meson.build &#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xC5EC; &#xBE4C;&#xB4DC;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC18C;&#xC2A4; &#xBE4C;&#xB4DC;&#xB294; tappas &#xACBD;&#xB85C;(&#xC555;&#xCD95;&#xD574;&#xC81C;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9;&#xD558;&#xB294; tappas workspace)&#xC5D0;&#xC11C; &#xC258; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xBE4C;&#xB4DC; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code>./scripts/gstreamer/install_hailo_gstreamer.sh
+</code></pre><p>&#x203B;    meson &#xC5D0;&#xB7EC;&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xACBD;&#xC6B0;</p>
+<ol>
+<li>Root&#xB85C; &#xBCC0;&#xD658;(sudo su) &#xD558;&#xC5EC; pip3 install meson&#xC73C;&#xB85C; meson&#xC744; &#xC7AC;&#xC124;&#xCE58;&#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>PATH=$PATH:/home//.local/bin &#xBA85;&#xB839;&#xC5B4;&#xB85C; meson &#xACBD;&#xB85C;&#xB97C; &#xD658;&#xACBD;&#xBCC0;&#xC218;&#xC5D0; &#xB4F1;&#xB85D;&#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>Export TAPPAS_WORKSPACE=<tappas 경로=""> &#xB85C; &#xC9C0;&#xC815;&#xD569;&#xB2C8;&#xB2E4;.</tappas></li>
+<li>&#xB2E4;&#xC2DC; ./scripts/gstreamer/install_hailo_gstreamer.sh&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.
+My_post&#xB97C; &#xBE4C;&#xB4DC;&#xD55C; &#xACBD;&#xC6B0; &#xAC04;&#xB2E8;&#xD55C; &#xD14C;&#xC2A4;&#xD2B8;&#xB294; &#xC544;&#xB798; &#xCEE4;&#xB9E8;&#xB4DC;&#xB85C; &#xD14C;&#xC2A4;&#xD2B8; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;.<pre><code>gst-launch-1.0 videotestsrc ! hailofilter so-path=/home/pi/hailo_install/tappas_v3.24.0/apps/h8/gstreamer/libs/post_processes/libmy_post.so ! autovideosink
+</code></pre></li>
+</ol>
+<h4 id="json-&#xD30C;&#xC77C;-&#xC791;&#xC131;">Json &#xD30C;&#xC77C; &#xC791;&#xC131;</h4>
+<p>Tappas&#xC758; &#xC608;&#xC81C; &#xD3F4;&#xB354;&#xC5D0;&#xB294; &#xAC01; &#xBAA8;&#xB378;&#xC5D0; &#xB9DE;&#xB294; configs &#xD3F4;&#xB354;&#xAC00; &#xC874;&#xC7AC;&#xD569;&#xB2C8;&#xB2E4;.
+Ex) detection &#xD3F4;&#xB354; &#xB0B4; config &#xD30C;&#xC77C;&#xB4E4;</p>
+<p>Hailofilter &#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; json &#xD30C;&#xC77C;&#xC5D0;&#xB294; iou, threshold, max_boxes, anchors, labels&#xB4F1;&#xC758; &#xAC12;&#xC774; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.  </p>
+<ul>
+<li>Yolov5.json &#xB0B4;&#xC6A9;
+&#xC544;&#xB798; &#xB0B4;&#xC6A9;&#xC744; &#xCC38;&#xC870;&#xD558;&#xC5EC; &#xD30C;&#xC77C;&#xC744; &#xC218;&#xC815;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.<ul>
+<li>iou_threshold : iou &#xAC12;</li>
+<li>detection_threshold : detection &#xB418;&#xC5C8;&#xC74C;&#xC744; &#xD310;&#xB2E8;&#xD560; &#xCD5C;&#xC18C; &#xAC12;</li>
+<li>output_activation : &#xD65C;&#xC131;&#xD654; &#xD568;&#xC218;</li>
+<li>label_offset : &#xB808;&#xC774;&#xBE14; &#xC2DC;&#xC791;&#xC704;&#xCE58; &#xC9C0;&#xC815; &#xAC12;</li>
+<li>max_boxes : &#xB3D9;&#xC2DC; &#xC0DD;&#xC131;&#xD560; &#xBC15;&#xC2A4;&#xC758; &#xCD5C;&#xB300; &#xAC1C;&#xC218;</li>
+<li>anchors : yolo &#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; anchors &#xAC12;</li>
+<li>labels : &#xB77C;&#xBCA8;&#xB9C1; &#xC791;&#xC5C5; &#xB54C; &#xC9C0;&#xC815;&#xB41C; &#xB77C;&#xBCA8; &#xC774;&#xB984; &#xB9AC;&#xC2A4;&#xD2B8;&#xC774;&#xBA70; &#xB9E8; &#xC55E;&#xC5D0; unlabeled &#xB294; &#xACE0;&#xC815;&#xC785;&#xB2C8;&#xB2E4;.<pre><code>&quot;iou_threshold&quot;: 0.45,
+&quot;detection_threshold&quot;: 0.3,
+&quot;output_activation&quot;: &quot;none&quot;,
+&quot;label_offset&quot;: 1,
+&quot;max_boxes&quot;: 200,
+&#x201C;anchors&quot;: [ [116, 90, 156, 198, 373, 326], [30, 61, 62, 45, 59, 119], [10, 13, 16, 30, 33, 23] ],
+&quot;labels&quot;: [ &quot;unlabeled&quot;, &quot;person&quot;, &quot;bicycle&quot;, &quot;car&quot;, &quot;motorcycle&quot;, &quot;airplane&quot;, &quot;bus&quot;, &quot;train&quot;, &quot;truck&quot; ]
+</code></pre></li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="RunningEnv.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 실행 환경 구성">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"실행 하기","level":"1.9","depth":1,"previous":{"title":"실행 환경 구성","level":"1.8","depth":1,"path":"With.AI/RunningEnv.md","ref":"With.AI/RunningEnv.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"With.AI/Running.md","mtime":"2023-06-15T10:40:17.642Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-15T10:47:39.663Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
