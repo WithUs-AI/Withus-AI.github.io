@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
                 
             
                 
@@ -34,7 +34,7 @@
 
     
         
-        <link rel="stylesheet" href="../../../../../website-1695027136270.css">
+        <link rel="stylesheet" href="../../../../../website-1695090896838.css">
         
     
 
@@ -527,12 +527,12 @@
 <ul>
 <li>zaiv_hailo_dfc.zip &#xD30C;&#xC77C;&#xC744; &#xC555;&#xCD95;&#xD574;&#xC81C;</li>
 </ul>
-<pre><code class="lang-bash">unzip zaiv_hailo_dfc.zip
+<pre class="language-"><code class="lang-bash"><span class="token function">unzip</span> zaiv_hailo_dfc.zip
 </code></pre>
 <ul>
 <li>&#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xB0B4;&#xC6A9; &#xC218;&#xC815;</li>
 </ul>
-<pre><code>1. yolov5_dfc.py &#x2013; dfc &#xC791;&#xC5C5;&#xC744; &#xC704;&#xD55C; Python Script. &#xB0B4;&#xC6A9; &#xC218;&#xC815; &#xD544;&#xC694;(&#xACBD;&#xB85C; / &#xC774;&#xBBF8;&#xC9C0; &#xD3EC;&#xB9F7; / &#xBAA8;&#xB378;&#xC774;&#xB984; &#xB4F1;)
+<pre class="language-"><code>1. yolov5_dfc.py &#x2013; dfc &#xC791;&#xC5C5;&#xC744; &#xC704;&#xD55C; Python Script. &#xB0B4;&#xC6A9; &#xC218;&#xC815; &#xD544;&#xC694;(&#xACBD;&#xB85C; / &#xC774;&#xBBF8;&#xC9C0; &#xD3EC;&#xB9F7; / &#xBAA8;&#xB378;&#xC774;&#xB984; &#xB4F1;)
 2. Dataset &#xD3F4;&#xB354; &#x2013; calibration&#xC6A9; &#xC774;&#xBBF8;&#xC9C0; &#xD3F4;&#xB354;
 3. har, hef, svg &#xD3F4;&#xB354; &#x2013; DFC &#xC0B0;&#xCD9C;&#xBB3C; &#xC800;&#xC7A5; &#xD3F4;&#xB354;
 4. xxx.onnx - &#xBCC0;&#xD658;&#xD560; onnx&#xD30C;&#xC77C;
@@ -542,12 +542,12 @@
 </code></pre><ul>
 <li>&#xB3C4;&#xCEE4; &#xACBD;&#xB85C;&#xB85C; &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xBCF5;&#xC0AC;</li>
 </ul>
-<pre><code class="lang-bash">docker cp zaiv_hailo_dfc/ hailo_sw_suite_2023-07.1_container:/<span class="hljs-built_in">local</span>/workspace/
+<pre class="language-"><code class="lang-bash"><span class="token function">docker</span> <span class="token function">cp</span> zaiv_hailo_dfc/ hailo_sw_suite_2023-07.1_container:/local/workspace/
 </code></pre>
 <ul>
 <li>&#xB3C4;&#xCEE4; &#xCEE8;&#xD14C;&#xC774;&#xB108; &#xD130;&#xBBF8;&#xB110;&#xC5D0;&#xC11C; yolov5_dfc.py &#xC2E4;&#xD589;</li>
 </ul>
-<pre><code class="lang-bash">python3 yolov5_dfc.py
+<pre class="language-"><code class="lang-bash">python3 yolov5_dfc.py
 </code></pre>
 
                                 
@@ -592,7 +592,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"YOLOv5","level":"1.2.3.1.1","depth":4,"next":{"title":"Inference","level":"1.2.4","depth":2,"path":"With.AI/ZAiV/V1/Inference.md","ref":"With.AI/ZAiV/V1/Inference.md","articles":[{"title":"Hailo","level":"1.2.4.1","depth":3,"path":"With.AI/ZAiV/V1/Inference/Hailo/Hailo.md","ref":"With.AI/ZAiV/V1/Inference/Hailo/Hailo.md","articles":[{"title":"YOLOv5","level":"1.2.4.1.1","depth":4,"path":"With.AI/ZAiV/V1/Inference/Hailo/YoloV5.md","ref":"With.AI/ZAiV/V1/Inference/Hailo/YoloV5.md","articles":[]}]}]},"previous":{"title":"Hailo","level":"1.2.3.1","depth":3,"path":"With.AI/ZAiV/V1/DFC/Hailo/Hailo.md","ref":"With.AI/ZAiV/V1/DFC/Hailo/Hailo.md","articles":[{"title":"YOLOv5","level":"1.2.3.1.1","depth":4,"path":"With.AI/ZAiV/V1/DFC/Hailo/YoloV5.md","ref":"With.AI/ZAiV/V1/DFC/Hailo/YoloV5.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix"],"pluginsConfig":{"theme-gestalt":{"styles":{"website":"styles/website.css"},"showLevel":false,"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":false},"copy-code-button":{},"styles-sass-fix":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1695027136270.css"}},"file":{"path":"With.AI/ZAiV/V1/DFC/Hailo/YoloV5.md","mtime":"2023-09-18T07:53:48.911Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-18T08:52:15.657Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"YOLOv5","level":"1.2.3.1.1","depth":4,"next":{"title":"Inference","level":"1.2.4","depth":2,"path":"With.AI/ZAiV/V1/Inference.md","ref":"With.AI/ZAiV/V1/Inference.md","articles":[{"title":"Hailo","level":"1.2.4.1","depth":3,"path":"With.AI/ZAiV/V1/Inference/Hailo/Hailo.md","ref":"With.AI/ZAiV/V1/Inference/Hailo/Hailo.md","articles":[{"title":"YOLOv5","level":"1.2.4.1.1","depth":4,"path":"With.AI/ZAiV/V1/Inference/Hailo/YoloV5.md","ref":"With.AI/ZAiV/V1/Inference/Hailo/YoloV5.md","articles":[]}]}]},"previous":{"title":"Hailo","level":"1.2.3.1","depth":3,"path":"With.AI/ZAiV/V1/DFC/Hailo/Hailo.md","ref":"With.AI/ZAiV/V1/DFC/Hailo/Hailo.md","articles":[{"title":"YOLOv5","level":"1.2.3.1.1","depth":4,"path":"With.AI/ZAiV/V1/DFC/Hailo/YoloV5.md","ref":"With.AI/ZAiV/V1/DFC/Hailo/YoloV5.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix","prism","-highlight"],"pluginsConfig":{"theme-gestalt":{"styles":{"website":"styles/website.css"},"showLevel":false,"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":true},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"copy-code-button":{},"styles-sass-fix":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1695090896838.css"}},"file":{"path":"With.AI/ZAiV/V1/DFC/Hailo/YoloV5.md","mtime":"2023-09-18T07:53:48.911Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-19T02:34:56.176Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>

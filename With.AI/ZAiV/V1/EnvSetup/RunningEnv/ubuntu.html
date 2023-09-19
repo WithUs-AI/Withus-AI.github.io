@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
                 
             
                 
@@ -34,7 +34,7 @@
 
     
         
-        <link rel="stylesheet" href="../../../../../website-1695027136270.css">
+        <link rel="stylesheet" href="../../../../../website-1695090896838.css">
         
     
 
@@ -529,79 +529,79 @@
 Withus&#xC758; &#xAE30;&#xBCF8; &#xC81C;&#xACF5; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC2DC;&#xBA74; &#xC885;&#xC18D;&#xC131; &#xC124;&#xCE58; &#xD56D;&#xBAA9;&#xC740; &#xAC74;&#xB108;&#xB6F0;&#xC5B4;&#xB3C4; &#xB429;&#xB2C8;&#xB2E4;.</p>
 <h3 id="&#xAE30;&#xBCF8;-&#xC124;&#xCE58;">&#xAE30;&#xBCF8; &#xC124;&#xCE58;</h3>
 <p>&#xD130;&#xBBF8;&#xB110;&#xC744; &#xC2E4;&#xD589; &#xD6C4; &#xBA3C;&#xC800; &#xD544;&#xC694;&#xD55C; &#xC885;&#xC18D;&#xC131;&#xB4E4;&#xC744; &#xC124;&#xCE58;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-bash">sudo apt-get install -y libopencv-dev
-sudo apt-get install gcc-9 g++-9
-sudo dpkg &#x2013;install hailort_4.12.0_arm64.deb
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token parameter variable">-y</span> libopencv-dev
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> gcc-9 g++-9
+<span class="token function">sudo</span> dpkg &#x2013;install hailort_4.12.0_arm64.deb
 </code></pre>
 <h3 id="ros-melodic-&#xBE4C;&#xB4DC;-&#xBC0F;-&#xC124;&#xCE58;-ubuntu-1804&#xC5D0;&#xC11C;-&#xAC80;&#xC99D;&#xB428;">ROS (Melodic) &#xBE4C;&#xB4DC; &#xBC0F; &#xC124;&#xCE58; (Ubuntu 18.04&#xC5D0;&#xC11C; &#xAC80;&#xC99D;&#xB428;)</h3>
 <p>ROS&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xC5D0;&#xB9CC; &#xBE4C;&#xB4DC; &#xBC0F; &#xC124;&#xCE58;&#xAC00; &#xD544;&#xC694;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <ul>
 <li>ROS Repositories &#xC124;&#xCE58;</li>
 </ul>
-<pre><code class="lang-bash">sudo sh -c <span class="hljs-string">&apos;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&apos;</span>
-sudo apt-key adv --keyserver <span class="hljs-string">&apos;hkp://keyserver.ubuntu.com:80&apos;</span> --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-sudo apt-get update
-sudo apt-get install -y python-rosdep python-rosinstall-generator python-wstool python-rosinstall build-essential cmake
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">sh</span> <span class="token parameter variable">-c</span> <span class="token string">&apos;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&apos;</span>
+<span class="token function">sudo</span> apt-key adv <span class="token parameter variable">--keyserver</span> <span class="token string">&apos;hkp://keyserver.ubuntu.com:80&apos;</span> --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token parameter variable">-y</span> python-rosdep python-rosinstall-generator python-wstool python-rosinstall build-essential cmake
 </code></pre>
 <ul>
 <li>Bootstrap Dependencies &#xC124;&#xCE58;</li>
 </ul>
-<pre><code class="lang-bash">sudo apt install -y python-rosdep python-rosinstall-generator python-wstool python-rosinstall build-essential cmake
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token parameter variable">-y</span> python-rosdep python-rosinstall-generator python-wstool python-rosinstall build-essential cmake
 </code></pre>
 <ul>
 <li>rosdep &#xCD08;&#xAE30;&#xD654;</li>
 </ul>
-<pre><code class="lang-bash">sudo rosdep init
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> rosdep init
 rosdep update
 </code></pre>
 <ul>
 <li>catkin Workspace &#xC0DD;&#xC131;</li>
 </ul>
-<pre><code class="lang-bash">mkdir -p ~/ros_catkin_ws
-<span class="hljs-built_in">cd</span> ~/ros_catkin_ws
+<pre class="language-"><code class="lang-bash"><span class="token function">mkdir</span> <span class="token parameter variable">-p</span> ~/ros_catkin_ws
+<span class="token builtin class-name">cd</span> ~/ros_catkin_ws
 </code></pre>
 <ul>
 <li>Workspace &#xC124;&#xCE58; (Desktop)</li>
 </ul>
-<pre><code class="lang-bash">rosinstall_generator desktop --rosdistro melodic --deps --wet-only --tar &gt; melodic-desktop-wet.rosinstall
+<pre class="language-"><code class="lang-bash">rosinstall_generator desktop <span class="token parameter variable">--rosdistro</span> melodic <span class="token parameter variable">--deps</span> --wet-only <span class="token parameter variable">--tar</span> <span class="token operator">&gt;</span> melodic-desktop-wet.rosinstall
 wstool init src melodic-desktop-wet.rosinstall
 </code></pre>
 <ul>
 <li>Dependencies &#xC124;&#xCE58;</li>
 </ul>
-<pre><code class="lang-bash">rosdep install -y --from-paths src --ignore-src --rosdistro melodic -r --os=debian:buster
+<pre class="language-"><code class="lang-bash">rosdep <span class="token function">install</span> <span class="token parameter variable">-y</span> --from-paths src --ignore-src <span class="token parameter variable">--rosdistro</span> melodic <span class="token parameter variable">-r</span> <span class="token parameter variable">--os</span><span class="token operator">=</span>debian:buster
 </code></pre>
 <ul>
 <li>catkin Workspace &#xBE4C;&#xB4DC;</li>
 </ul>
-<pre><code class="lang-bash">sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/melodic
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> ./src/catkin/bin/catkin_make_isolated <span class="token parameter variable">--install</span> <span class="token parameter variable">-DCMAKE_BUILD_TYPE</span><span class="token operator">=</span>Release --install-space /opt/ros/melodic
 </code></pre>
 <ul>
 <li>source the new installation</li>
 </ul>
-<pre><code class="lang-bash"><span class="hljs-built_in">source</span> /opt/ros/melodic/setup.bash
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">source</span> /opt/ros/melodic/setup.bash
 </code></pre>
 <ul>
 <li>environment &#xBCC0;&#xC218; &#xCD94;&#xAC00;</li>
 </ul>
-<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;source /opt/ros/melodic/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">echo</span> <span class="token string">&quot;source /opt/ros/melodic/setup.bash&quot;</span> <span class="token operator">&gt;&gt;</span> ~/.bashrc
 </code></pre>
 <ul>
 <li>Released Packages &#xCD94;&#xAC00;</li>
 </ul>
-<pre><code class="lang-bash">rosinstall_generator ros_comm ros_control joystick_drivers --rosdistro melodic --deps --wet-only --tar &gt; melodic-custom_ros.rosinstall
-rosinstall_generator compressed_image_transport --rosdistro melodic --deps --wet-only --tar &gt; melodic-compressed_image_transport-wet.rosinstall
-rosinstall_generator camera_info_manager --rosdistro melodic --deps --wet-only --tar &gt; melodic-camera_info_manager-wet.rosinstall
-rosinstall_generator dynamic_reconfigure --rosdistro melodic --deps --wet-only --tar &gt; melodic-dynamic_reconfigure-wet.rosinstall
+<pre class="language-"><code class="lang-bash">rosinstall_generator ros_comm ros_control joystick_drivers <span class="token parameter variable">--rosdistro</span> melodic <span class="token parameter variable">--deps</span> --wet-only <span class="token parameter variable">--tar</span> <span class="token operator">&gt;</span> melodic-custom_ros.rosinstall
+rosinstall_generator compressed_image_transport <span class="token parameter variable">--rosdistro</span> melodic <span class="token parameter variable">--deps</span> --wet-only <span class="token parameter variable">--tar</span> <span class="token operator">&gt;</span> melodic-compressed_image_transport-wet.rosinstall
+rosinstall_generator camera_info_manager <span class="token parameter variable">--rosdistro</span> melodic <span class="token parameter variable">--deps</span> --wet-only <span class="token parameter variable">--tar</span> <span class="token operator">&gt;</span> melodic-camera_info_manager-wet.rosinstall
+rosinstall_generator dynamic_reconfigure <span class="token parameter variable">--rosdistro</span> melodic <span class="token parameter variable">--deps</span> --wet-only <span class="token parameter variable">--tar</span> <span class="token operator">&gt;</span> melodic-dynamic_reconfigure-wet.rosinstall
 
-wstool merge -t src melodic-custom_ros.rosinstall
-wstool merge -t src melodic-compressed_image_transport-wet.rosinstall
-wstool merge -t src melodic-camera_info_manager-wet.rosinstall
-wstool merge -t src melodic-dynamic_reconfigure-wet.rosinstall
+wstool merge <span class="token parameter variable">-t</span> src melodic-custom_ros.rosinstall
+wstool merge <span class="token parameter variable">-t</span> src melodic-compressed_image_transport-wet.rosinstall
+wstool merge <span class="token parameter variable">-t</span> src melodic-camera_info_manager-wet.rosinstall
+wstool merge <span class="token parameter variable">-t</span> src melodic-dynamic_reconfigure-wet.rosinstall
 
-wstool update -t src
-rosdep install --from-paths src --ignore-src --rosdistro melodic -y -r --os=debian:buster
-sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/melodic
+wstool update <span class="token parameter variable">-t</span> src
+rosdep <span class="token function">install</span> --from-paths src --ignore-src <span class="token parameter variable">--rosdistro</span> melodic <span class="token parameter variable">-y</span> <span class="token parameter variable">-r</span> <span class="token parameter variable">--os</span><span class="token operator">=</span>debian:buster
+<span class="token function">sudo</span> ./src/catkin/bin/catkin_make_isolated <span class="token parameter variable">--install</span> <span class="token parameter variable">-DCMAKE_BUILD_TYPE</span><span class="token operator">=</span>Release --install-space /opt/ros/melodic
 </code></pre>
 
                                 
@@ -646,7 +646,7 @@ sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Ubuntu & RaspbianOS","level":"1.2.1.2.1","depth":4,"next":{"title":"Training","level":"1.2.2","depth":2,"path":"With.AI/ZAiV/V1/TrainingModel.md","ref":"With.AI/ZAiV/V1/TrainingModel.md","articles":[{"title":"YOLOv5","level":"1.2.2.1","depth":3,"path":"With.AI/ZAiV/V1/Training/YOLOv5.md","ref":"With.AI/ZAiV/V1/Training/YOLOv5.md","articles":[]}]},"previous":{"title":"Running","level":"1.2.1.2","depth":3,"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/RunningEnv.md","ref":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/RunningEnv.md","articles":[{"title":"Ubuntu & RaspbianOS","level":"1.2.1.2.1","depth":4,"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","ref":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix"],"pluginsConfig":{"theme-gestalt":{"styles":{"website":"styles/website.css"},"showLevel":false,"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":false},"copy-code-button":{},"styles-sass-fix":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1695027136270.css"}},"file":{"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","mtime":"2023-09-18T07:53:52.964Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-18T08:52:15.657Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Ubuntu & RaspbianOS","level":"1.2.1.2.1","depth":4,"next":{"title":"Training","level":"1.2.2","depth":2,"path":"With.AI/ZAiV/V1/TrainingModel.md","ref":"With.AI/ZAiV/V1/TrainingModel.md","articles":[{"title":"YOLOv5","level":"1.2.2.1","depth":3,"path":"With.AI/ZAiV/V1/Training/YOLOv5.md","ref":"With.AI/ZAiV/V1/Training/YOLOv5.md","articles":[]}]},"previous":{"title":"Running","level":"1.2.1.2","depth":3,"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/RunningEnv.md","ref":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/RunningEnv.md","articles":[{"title":"Ubuntu & RaspbianOS","level":"1.2.1.2.1","depth":4,"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","ref":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix","prism","-highlight"],"pluginsConfig":{"theme-gestalt":{"styles":{"website":"styles/website.css"},"showLevel":false,"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":true},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"copy-code-button":{},"styles-sass-fix":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1695090896838.css"}},"file":{"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","mtime":"2023-09-18T07:53:52.964Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-19T02:34:56.176Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>

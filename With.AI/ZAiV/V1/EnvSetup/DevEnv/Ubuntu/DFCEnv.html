@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../../../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../../../../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
                 
             
                 
@@ -34,7 +34,7 @@
 
     
         
-        <link rel="stylesheet" href="../../../../../../website-1695027136270.css">
+        <link rel="stylesheet" href="../../../../../../website-1695090896838.css">
         
     
 
@@ -529,47 +529,47 @@
 <ul>
 <li>APT repository &#xC5C5;&#xB370;&#xC774;&#xD2B8;</li>
 </ul>
-<pre><code class="lang-bash">sudo apt-get update
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> update
 </code></pre>
 <ul>
 <li>Docker&apos;s official GPG key &#xCD94;&#xAC00;</li>
 </ul>
-<pre><code class="lang-bash">sudo apt-get install ca-certificates curl gnupg
-sudo install -m 0755 <span class="hljs-_">-d</span> /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ca-certificates <span class="token function">curl</span> gnupg
+<span class="token function">sudo</span> <span class="token function">install</span> <span class="token parameter variable">-m</span> 0755 <span class="token parameter variable">-d</span> /etc/apt/keyrings
+<span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg <span class="token operator">|</span> <span class="token function">sudo</span> gpg <span class="token parameter variable">--dearmor</span> <span class="token parameter variable">-o</span> /etc/apt/keyrings/docker.gpg
+<span class="token function">sudo</span> <span class="token function">chmod</span> a+r /etc/apt/keyrings/docker.gpg
 </code></pre>
 <ul>
 <li>Docker repository&#xB97C; APT sources&#xC5D0; &#xCD94;&#xAC00;</li>
 </ul>
-<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;deb [arch=&quot;</span>$(dpkg --print-architecture)<span class="hljs-string">&quot; \
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">echo</span> <span class="token string">&quot;deb [arch=&quot;</span><span class="token variable"><span class="token variable">$(</span>dpkg --print-architecture<span class="token variable">)</span></span><span class="token string">&quot; \
 signed-by=/etc/apt/keyrings/docker.gpg] \https://download.docker.com/linux/ubuntu \
-  &quot;</span>$(. /etc/os-release &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$VERSION_CODENAME</span>&quot;</span>)<span class="hljs-string">&quot; stable&quot;</span> | \
-sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+  &quot;</span><span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">.</span> /etc/os-release <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$VERSION_CODENAME</span>&quot;</span><span class="token variable">)</span></span><span class="token string">&quot; stable&quot;</span> <span class="token operator">|</span> <span class="token punctuation">\</span>
+<span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/docker.list <span class="token operator">&gt;</span> /dev/null
 
-sudo apt-get update
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
 </code></pre>
 <ul>
 <li>Docker packages &#xC124;&#xCE58;</li>
 </ul>
-<pre><code class="lang-bash">sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 </code></pre>
 <ul>
 <li>Docker &#xD14C;&#xC2A4;&#xD2B8;</li>
 </ul>
-<pre><code class="lang-bash">sudo docker images
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">docker</span> images
 </code></pre>
 <p>&#x2003;</p>
 <h2 id="docker-&#xC124;&#xC815;">Docker &#xC124;&#xC815;</h2>
 <ul>
 <li>Docker &#xAD8C;&#xD55C; &#xBD80;&#xC5EC;</li>
 </ul>
-<pre><code class="lang-bash">sudo usermod <span class="hljs-_">-a</span>G docker <span class="hljs-variable">${USER}</span>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">usermod</span> <span class="token parameter variable">-aG</span> <span class="token function">docker</span> <span class="token variable">${<span class="token environment constant">USER</span>}</span>
 </code></pre>
 <ul>
 <li>Docker.sock permission &#xC624;&#xB958;&#xAC00; &#xB098;&#xB294; &#xACBD;&#xC6B0;</li>
 </ul>
-<pre><code class="lang-bash">sudo chmod 666 /var/run/docker.sock
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">666</span> /var/run/docker.sock
 </code></pre>
 <ul>
 <li><p>&#xACC4;&#xC815; &#xB85C;&#xADF8;&#xC544;&#xC6C3; &#xBC0F; &#xC7AC;&#xB85C;&#xADF8;&#xC778; &#xD544;&#xC694;</p>
@@ -577,31 +577,31 @@ sudo apt-get update
 <li><p>GPU &#xAC00;&#xC0C1;&#xD654;&#xB97C; &#xC704;&#xD55C; nvidia-docker2, nvidia-container-toolkit &#xC124;&#xCE58;</p>
 </li>
 </ul>
-<pre><code class="lang-bash">distribution=$(. /etc/os-release;<span class="hljs-built_in">echo</span> <span class="hljs-variable">$ID</span><span class="hljs-variable">$VERSION_ID</span>) \
-&amp;&amp; curl <span class="hljs-_">-s</span> -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - \
-&amp;&amp; curl <span class="hljs-_">-s</span> -L https://nvidia.github.io/nvidia-docker/<span class="hljs-variable">$distribution</span>/nvidia-docker.list \
-| sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+<pre class="language-"><code class="lang-bash"><span class="token assign-left variable">distribution</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">.</span> /etc/os-release<span class="token punctuation">;</span><span class="token builtin class-name">echo</span> $ID$VERSION_ID<span class="token variable">)</span></span> <span class="token punctuation">\</span>
+<span class="token operator">&amp;&amp;</span> <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-L</span> https://nvidia.github.io/nvidia-docker/gpgkey <span class="token operator">|</span> <span class="token function">sudo</span> apt-key <span class="token function">add</span> - <span class="token punctuation">\</span>
+<span class="token operator">&amp;&amp;</span> <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-L</span> https://nvidia.github.io/nvidia-docker/<span class="token variable">$distribution</span>/nvidia-docker.list <span class="token punctuation">\</span>
+<span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/nvidia-docker.list
 
-sudo apt-get update
-sudo apt-get install -y nvidia-docker2 nvidia-container-toolkit
-sudo systemctl restart docker
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token parameter variable">-y</span> nvidia-docker2 nvidia-container-toolkit
+<span class="token function">sudo</span> systemctl restart <span class="token function">docker</span>
 </code></pre>
 <h2 id="hailo-sw-suite-&#xC124;&#xCE58;">Hailo SW Suite &#xC124;&#xCE58;</h2>
 <ul>
 <li>Hailo sw suite docker zip &#xC124;&#xCE58; &#xBC0F; &#xC555;&#xCD95; &#xD574;&#xC81C;</li>
 </ul>
-<pre><code class="lang-bash">// https://drive.google.com/file/d/180Tw4spRo7D81ommwohHnWZhCeiQaDRj/view?usp=drive_link : &#xC811;&#xC18D;&#xD558;&#xC5EC; &#xC124;&#xCE58;
-unzip hailo_sw_suite_2023-07.1_docker.zip
+<pre class="language-"><code class="lang-bash">// https://drive.google.com/file/d/180Tw4spRo7D81ommwohHnWZhCeiQaDRj/view?usp<span class="token operator">=</span>drive_link <span class="token builtin class-name">:</span> &#xC811;&#xC18D;&#xD558;&#xC5EC; &#xC124;&#xCE58;
+<span class="token function">unzip</span> hailo_sw_suite_2023-07.1_docker.zip
 </code></pre>
 <ul>
 <li>Docker_run.sh &#xC2E4;&#xD589;</li>
 </ul>
-<pre><code class="lang-bash">./hailo_sw_suite_docker_run.sh
+<pre class="language-"><code class="lang-bash">./hailo_sw_suite_docker_run.sh
 </code></pre>
 <ul>
 <li>Docker &#xC7AC;&#xC811;&#xC18D; &#xBA85;&#xB839;&#xC5B4;</li>
 </ul>
-<pre><code class="lang-bash">./hailo_sw_suite_docker_run.sh --resume
+<pre class="language-"><code class="lang-bash">./hailo_sw_suite_docker_run.sh <span class="token parameter variable">--resume</span>
 </code></pre>
 
                                 
@@ -646,7 +646,7 @@ unzip hailo_sw_suite_2023-07.1_docker.zip
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"DFC Env","level":"1.2.1.1.2.2","depth":5,"next":{"title":"Running","level":"1.2.1.2","depth":3,"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/RunningEnv.md","ref":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/RunningEnv.md","articles":[{"title":"Ubuntu & RaspbianOS","level":"1.2.1.2.1","depth":4,"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","ref":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","articles":[]}]},"previous":{"title":"YoloV5 Training Env","level":"1.2.1.1.2.1","depth":5,"path":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/yolov5TrainingEnv.md","ref":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/yolov5TrainingEnv.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix"],"pluginsConfig":{"theme-gestalt":{"styles":{"website":"styles/website.css"},"showLevel":false,"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":false},"copy-code-button":{},"styles-sass-fix":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1695027136270.css"}},"file":{"path":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/DFCEnv.md","mtime":"2023-09-18T07:53:52.980Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-18T08:52:15.657Z"},"basePath":"../../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"DFC Env","level":"1.2.1.1.2.2","depth":5,"next":{"title":"Running","level":"1.2.1.2","depth":3,"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/RunningEnv.md","ref":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/RunningEnv.md","articles":[{"title":"Ubuntu & RaspbianOS","level":"1.2.1.2.1","depth":4,"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","ref":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","articles":[]}]},"previous":{"title":"YoloV5 Training Env","level":"1.2.1.1.2.1","depth":5,"path":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/yolov5TrainingEnv.md","ref":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/yolov5TrainingEnv.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix","prism","-highlight"],"pluginsConfig":{"theme-gestalt":{"styles":{"website":"styles/website.css"},"showLevel":false,"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":true},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"copy-code-button":{},"styles-sass-fix":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1695090896838.css"}},"file":{"path":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/DFCEnv.md","mtime":"2023-09-18T07:53:52.980Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-19T02:34:56.176Z"},"basePath":"../../../../../..","book":{"language":""}});
         });
     </script>
 </div>

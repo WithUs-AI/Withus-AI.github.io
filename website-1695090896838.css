@@ -2532,7 +2532,7 @@ table {
 
 html, body {
   height: 100%;
-  font-size: 16px; }
+  font-size: 12px; }
 
 body {
   text-rendering: optimizeLegibility;
@@ -2574,8 +2574,8 @@ body {
   left: 0px;
   bottom: 0px;
   overflow-y: auto;
-  color: #666666;
-  background: white; }
+  color: #cccccc;
+  background: #333333; }
   @media (max-width: 1240px) {
     .book-body .body-inner {
       position: static;
@@ -2587,8 +2587,8 @@ body {
 
 .page-inner {
   position: relative;
-  background: white;
-  max-width: 800px;
+  background: #333333;
+  max-width: 1670px;
   margin: 0px auto;
   padding: 30px 20px; }
 
@@ -2603,7 +2603,7 @@ body {
   height: 50px;
   z-index: 2;
   padding: 0px 5px;
-  color: #666666;
+  color: #cccccc;
   background: transparent; }
 
 .book-header .btn {
@@ -2615,7 +2615,7 @@ body {
   line-height: 50px;
   box-shadow: none !important;
   position: relative;
-  font-size: 16px;
+  font-size: 12px;
   color: #cccccc; }
 
 .book-header .btn:hover {
@@ -2665,26 +2665,26 @@ body {
   display: none; }
 
 .book-logo {
-  padding: 20px 15px;
-  background: white;
-  border-bottom: 1px solid #f2f2f2; }
+  padding: 5px 20px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #4d4d4d; }
 
 .book-logo img {
-  max-height: 30px; }
+  max-height: 100px; }
 
 .book-summary {
   position: absolute;
   top: 0;
-  left: -300px;
+  left: -350px;
   bottom: 0;
   z-index: 1;
   overflow-y: auto;
-  width: 300px;
+  width: 350px;
   color: #364149;
-  background: #fafafa;
-  border-right: 1px solid #f2f2f2;
+  background: #1a1a1a;
+  border-right: 1px solid #4d4d4d;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.8em;
+  font-size: 1.5em;
   transition: left 250ms ease; }
   @media (max-width: 600px) {
     .book-summary {
@@ -2703,12 +2703,12 @@ body {
 
 @media (min-width: 600px) {
   .book.with-summary .book-body {
-    left: 300px; } }
+    left: 350px; } }
 
 .book-summary ul.summary {
   list-style: none;
   margin: 0;
-  padding: 20px 15px;
+  padding: 5px 20px;
   transition: top 0.5s ease; }
 
 .book-summary .hide {
@@ -2728,13 +2728,13 @@ body {
   padding-top: 0; }
 
 .book-summary ul.summary li.header.selected {
-  color: #ff4f4f; }
+  color: #cccccc; }
 
 .book-summary ul.summary li.divider {
   height: 1px;
   margin: 5px 0;
   overflow: hidden;
-  background: #f2f2f2; }
+  background: #4d4d4d; }
 
 .book-summary ul.summary li a,
 .book-summary ul.summary li span {
@@ -2745,7 +2745,7 @@ body {
   white-space: nowrap;
   padding: 10px 0;
   border-bottom: none;
-  color: #666666;
+  color: #cccccc;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .book-summary ul.summary li.selected > a,
@@ -2754,27 +2754,27 @@ body {
 
 .book-summary ul.summary li.active > a,
 .book-summary ul.summary li a:hover {
-  color: #ff4f4f;
+  color: #0072bc;
   text-decoration: none; }
 
 .book-summary ul.summary li ul {
   padding-left: 10px; }
 
 a {
-  color: #ff4f4f;
+  color: #cccccc;
   text-decoration: none; }
 
 a:hover {
   text-decoration: underline; }
 
 .book.font-size-0 .book-body .page-inner section {
-  font-size: 0.8rem; }
-
-.book.font-size-1 .book-body .page-inner section {
   font-size: 1rem; }
 
-.book.font-size-2 .book-body .page-inner section {
+.book.font-size-1 .book-body .page-inner section {
   font-size: 1.2rem; }
+
+.book.font-size-2 .book-body .page-inner section {
+  font-size: 1.4rem; }
 
 .book.font-size-3 .book-body .page-inner section {
   font-size: 1.6rem; }
@@ -2829,41 +2829,47 @@ hr {
   border: none;
   height: 4px;
   margin: 30px 0;
-  background-color: #f2f2f2; }
+  background-color: #4d4d4d; }
 
 h1 {
-  color: #1a1a1a;
-  font-family: Georgia, serif;
-  font-size: 2rem; }
+  color: #cccccc;
+  border-bottom: 1px solid #cccccc;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 6rem; }
 
 h2 {
-  color: #1a1a1a;
-  font-family: Georgia, serif;
-  font-size: 1.6rem; }
+  color: #cccccc;
+  border-bottom: 1px solid #cccccc;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.5rem; }
 
 h3 {
-  color: #1a1a1a;
-  font-family: Georgia, serif;
-  font-size: 1.2rem; }
+  color: #cccccc;
+  border-bottom: 1px solid #cccccc;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem; }
 
 h4 {
-  color: #1a1a1a;
-  font-family: Georgia, serif;
-  font-size: 1rem; }
+  color: #cccccc;
+  border-bottom: 1px solid #cccccc;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.2rem; }
 
 h5 {
-  color: #1a1a1a;
-  font-family: Georgia, serif;
-  font-size: 0.9rem; }
+  color: #cccccc;
+  border-bottom: 1px solid #cccccc;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.1rem; }
 
 h6 {
-  color: #1a1a1a;
-  font-family: Georgia, serif;
-  font-size: 0.8rem; }
+  color: #cccccc;
+  border-bottom: 1px solid #cccccc;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem; }
 
 code, pre {
   direction: ltr;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: "Bitstream Vera Sans Mono", "Courier New", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   margin: 0px;
   padding: 0px;
   border: none; }
@@ -2874,7 +2880,7 @@ pre {
   margin: 0px;
   padding: 0.85em 1em;
   margin-bottom: 10px;
-  background: #f2f2f2; }
+  background: #666666; }
 
 pre > code {
   display: inline;
@@ -2893,7 +2899,7 @@ code {
   padding: 0.2em;
   margin: 0;
   font-size: 0.85em;
-  background-color: #f2f2f2; }
+  background-color: #666666; }
   code:before, code:after {
     letter-spacing: -0.2em;
     content: "\00a0"; }
@@ -2935,7 +2941,7 @@ blockquote {
   margin: 0 0 0 10px;
   padding: 0 20px;
   color: #999999;
-  border-left: 4px solid #f2f2f2; }
+  border-left: 4px solid #4d4d4d; }
   blockquote:first-child {
     margin-top: 0; }
   blockquote:last-child {
@@ -3026,14 +3032,15 @@ dd {
   left: 0px; }
 
 #book-search-input {
-  padding: 5px 15px;
+  padding: 1.25px 20px;
   transition: top 0.5s ease;
-  background: #fff;
-  border-bottom: 1px solid #f2f2f2; }
+  background: gray;
+  border-bottom: 1px solid #4d4d4d; }
   #book-search-input input, #book-search-input input:focus, #book-search-input input:hover {
     width: 100%;
     box-shadow: none;
     outline: none;
+    color: #cccccc;
     background: transparent;
     border: 1px solid transparent;
     padding: 10px 0; }
@@ -3058,9 +3065,9 @@ body.with-search .navigation {
   padding: 0;
   margin: 2px 0 0;
   list-style: none;
-  font-size: 16px;
-  background-color: #fafafa;
-  border: 1px solid #f2f2f2;
+  font-size: 12px;
+  background-color: #1a1a1a;
+  border: 1px solid #4d4d4d;
   border-radius: 1px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box; }
@@ -3105,10 +3112,10 @@ body.with-search .navigation {
   top: 1px;
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
-  border-bottom: 9px solid #fafafa; }
+  border-bottom: 9px solid #1a1a1a; }
 
 .dropdown .buttons {
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #4d4d4d;
   /* Clear fix */ }
   .dropdown .buttons:before, .dropdown .buttons:after {
     content: " ";

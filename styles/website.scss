@@ -1,0 +1,20 @@
+@import "variables";
+// Put your variable overrides here
+$book-background: hsl(0, 0%, 20%);
+$page-background: hsl(0, 0%, 20%);
+$page-code-background: hsl(0, 0%, 40%);
+$sidebar-background: hsl(0, 0%, 10%);
+$sidebar-search-background:hsl(0, 0%, 50%);
+$color-border: $color-gray-dark;
+
+// Put your variable overrides here
+$font-size-base : 12px;
+$color-primary: hsl(0, 0%, 80%);
+$color-text: hsl(0, 0%, 80%);
+
+$heading-map : (color: $color-primary,
+    border-bottom: 1px solid $color-primary,
+    font-family: $font-family-sans);
+
+
+@import "all";
