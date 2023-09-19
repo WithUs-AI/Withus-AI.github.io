@@ -34,7 +34,7 @@
 
     
         
-        <link rel="stylesheet" href="../../../../../../website-1695090896838.css">
+        <link rel="stylesheet" href="../../../../../../website-1695111800403.css">
         
     
 
@@ -58,7 +58,7 @@
     <link rel="next" href="../../RunningEnv/RunningEnv.html" />
     
     
-    <link rel="prev" href="yolov5TrainingEnv.html" />
+    <link rel="prev" href="BasicSetup.html" />
     
 
     </head>
@@ -212,13 +212,13 @@
         <li class="chapter 
               "
             data-level="1.2.1.1.2.1" 
-            data-path="yolov5TrainingEnv.html">
+            data-path="BasicSetup.html">
 
             
-                <a href="yolov5TrainingEnv.html">
+                <a href="BasicSetup.html">
             
                     
-                    YoloV5 Training Env
+                    Basic Setup
             
                 </a>
             
@@ -306,7 +306,7 @@
         <li class="chapter 
               "
             data-level="1.2.2" 
-            data-path="../../../TrainingModel.md">
+            data-path="../../../Training/Training.md">
 
             
                 <span>
@@ -326,17 +326,42 @@
         <li class="chapter 
               "
             data-level="1.2.2.1" 
-            data-path="../../../Training/YOLOv5.md">
+            data-path="../../../Training/Ubuntu.md">
 
             
                 <span>
             
                     
-                    YOLOv5
+                    Ubuntu
             
                 </a>
             
 
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2.2.1.1" 
+            data-path="../../../Training/Ubuntu/yolov5Training.html">
+
+            
+                <a href="../../../Training/Ubuntu/yolov5Training.html">
+            
+                    
+                    YoloV5 Training Env
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -457,17 +482,60 @@
         <li class="chapter 
               "
             data-level="1.2.4.1.1" 
-            data-path="../../../Inference/Hailo/YoloV5.html">
+            >
 
             
-                <a href="../../../Inference/Hailo/YoloV5.html">
+                <span>
             
                     
                     YOLOv5
             
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2.4.1.1.1" 
+            data-path="../../../Inference/Hailo/YoloV5/PCI.html">
+
+            
+                <a href="../../../Inference/Hailo/YoloV5/PCI.html">
+            
+                    
+                    PCI Interface
+            
                 </a>
             
 
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2.4.1.1.2" 
+            data-path="../../../Inference/Hailo/YoloV5/Ethernet.html">
+
+            
+                <a href="../../../Inference/Hailo/YoloV5/Ethernet.html">
+            
+                    
+                    USB & Etherent Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -524,85 +592,26 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="dfc-envirnment-for-ubuntu">DFC Envirnment for Ubuntu</h1>
-<h2 id="docker-&#xC124;&#xCE58;">Docker &#xC124;&#xCE58;</h2>
-<h4 id="docker-apt-repository-&#xCD94;&#xAC00;">Docker APT repository &#xCD94;&#xAC00;</h4>
-<ul>
-<li>APT repository &#xC5C5;&#xB370;&#xC774;&#xD2B8;</li>
-</ul>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> update
-</code></pre>
-<ul>
-<li>Docker&apos;s official GPG key &#xCD94;&#xAC00;</li>
-</ul>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ca-certificates <span class="token function">curl</span> gnupg
-<span class="token function">sudo</span> <span class="token function">install</span> <span class="token parameter variable">-m</span> 0755 <span class="token parameter variable">-d</span> /etc/apt/keyrings
-<span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg <span class="token operator">|</span> <span class="token function">sudo</span> gpg <span class="token parameter variable">--dearmor</span> <span class="token parameter variable">-o</span> /etc/apt/keyrings/docker.gpg
-<span class="token function">sudo</span> <span class="token function">chmod</span> a+r /etc/apt/keyrings/docker.gpg
-</code></pre>
-<ul>
-<li>Docker repository&#xB97C; APT sources&#xC5D0; &#xCD94;&#xAC00;</li>
-</ul>
-<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">echo</span> <span class="token string">&quot;deb [arch=&quot;</span><span class="token variable"><span class="token variable">$(</span>dpkg --print-architecture<span class="token variable">)</span></span><span class="token string">&quot; \
-signed-by=/etc/apt/keyrings/docker.gpg] \https://download.docker.com/linux/ubuntu \
-  &quot;</span><span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">.</span> /etc/os-release <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$VERSION_CODENAME</span>&quot;</span><span class="token variable">)</span></span><span class="token string">&quot; stable&quot;</span> <span class="token operator">|</span> <span class="token punctuation">\</span>
-<span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/docker.list <span class="token operator">&gt;</span> /dev/null
-
-<span class="token function">sudo</span> <span class="token function">apt-get</span> update
-</code></pre>
-<ul>
-<li>Docker packages &#xC124;&#xCE58;</li>
-</ul>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-</code></pre>
-<ul>
-<li>Docker &#xD14C;&#xC2A4;&#xD2B8;</li>
-</ul>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">docker</span> images
-</code></pre>
-<p>&#x2003;</p>
-<h2 id="docker-&#xC124;&#xC815;">Docker &#xC124;&#xC815;</h2>
-<ul>
-<li>Docker &#xAD8C;&#xD55C; &#xBD80;&#xC5EC;</li>
-</ul>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">usermod</span> <span class="token parameter variable">-aG</span> <span class="token function">docker</span> <span class="token variable">${<span class="token environment constant">USER</span>}</span>
-</code></pre>
-<ul>
-<li>Docker.sock permission &#xC624;&#xB958;&#xAC00; &#xB098;&#xB294; &#xACBD;&#xC6B0;</li>
-</ul>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">666</span> /var/run/docker.sock
-</code></pre>
-<ul>
-<li><p>&#xACC4;&#xC815; &#xB85C;&#xADF8;&#xC544;&#xC6C3; &#xBC0F; &#xC7AC;&#xB85C;&#xADF8;&#xC778; &#xD544;&#xC694;</p>
-</li>
-<li><p>GPU &#xAC00;&#xC0C1;&#xD654;&#xB97C; &#xC704;&#xD55C; nvidia-docker2, nvidia-container-toolkit &#xC124;&#xCE58;</p>
-</li>
-</ul>
-<pre class="language-"><code class="lang-bash"><span class="token assign-left variable">distribution</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">.</span> /etc/os-release<span class="token punctuation">;</span><span class="token builtin class-name">echo</span> $ID$VERSION_ID<span class="token variable">)</span></span> <span class="token punctuation">\</span>
-<span class="token operator">&amp;&amp;</span> <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-L</span> https://nvidia.github.io/nvidia-docker/gpgkey <span class="token operator">|</span> <span class="token function">sudo</span> apt-key <span class="token function">add</span> - <span class="token punctuation">\</span>
-<span class="token operator">&amp;&amp;</span> <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-L</span> https://nvidia.github.io/nvidia-docker/<span class="token variable">$distribution</span>/nvidia-docker.list <span class="token punctuation">\</span>
-<span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/nvidia-docker.list
-
-<span class="token function">sudo</span> <span class="token function">apt-get</span> update
-<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token parameter variable">-y</span> nvidia-docker2 nvidia-container-toolkit
-<span class="token function">sudo</span> systemctl restart <span class="token function">docker</span>
-</code></pre>
 <h2 id="hailo-sw-suite-&#xC124;&#xCE58;">Hailo SW Suite &#xC124;&#xCE58;</h2>
 <ul>
-<li>Hailo sw suite docker zip &#xC124;&#xCE58; &#xBC0F; &#xC555;&#xCD95; &#xD574;&#xC81C;</li>
-</ul>
-<pre class="language-"><code class="lang-bash">// https://drive.google.com/file/d/180Tw4spRo7D81ommwohHnWZhCeiQaDRj/view?usp<span class="token operator">=</span>drive_link <span class="token builtin class-name">:</span> &#xC811;&#xC18D;&#xD558;&#xC5EC; &#xC124;&#xCE58;
-<span class="token function">unzip</span> hailo_sw_suite_2023-07.1_docker.zip
-</code></pre>
+<li><p>Hailo sw suite docker.zip &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xBC0F; &#xC555;&#xCD95; &#xD574;&#xC81C;</p>
 <ul>
-<li>Docker_run.sh &#xC2E4;&#xD589;</li>
+<li>&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;: <a href="https://drive.google.com/file/d/180Tw4spRo7D81ommwohHnWZhCeiQaDRj/view?usp=drive_link" target="_blank">https://drive.google.com/file/d/180Tw4spRo7D81ommwohHnWZhCeiQaDRj/view?usp=drive_link</a></li>
 </ul>
+</li>
+<li><p>&#xC555;&#xCD95;&#xD574;&#xC81C;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">unzip</span> hailo_sw_suite_2023-07.1_docker.zip
+</code></pre>
+</li>
+<li><p>Docker_run.sh &#xC2E4;&#xD589;</p>
 <pre class="language-"><code class="lang-bash">./hailo_sw_suite_docker_run.sh
 </code></pre>
-<ul>
-<li>Docker &#xC7AC;&#xC811;&#xC18D; &#xBA85;&#xB839;&#xC5B4;</li>
-</ul>
+</li>
+<li><p>Docker &#xC7AC;&#xC811;&#xC18D; &#xBA85;&#xB839;&#xC5B4;</p>
 <pre class="language-"><code class="lang-bash">./hailo_sw_suite_docker_run.sh <span class="token parameter variable">--resume</span>
 </code></pre>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -630,7 +639,7 @@ signed-by=/etc/apt/keyrings/docker.gpg] \https://download.docker.com/linux/ubunt
 
             
                 
-                <a href="yolov5TrainingEnv.html" class="navigation navigation-prev " aria-label="Previous page: YoloV5 Training Env">
+                <a href="BasicSetup.html" class="navigation navigation-prev " aria-label="Previous page: Basic Setup">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -646,7 +655,7 @@ signed-by=/etc/apt/keyrings/docker.gpg] \https://download.docker.com/linux/ubunt
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"DFC Env","level":"1.2.1.1.2.2","depth":5,"next":{"title":"Running","level":"1.2.1.2","depth":3,"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/RunningEnv.md","ref":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/RunningEnv.md","articles":[{"title":"Ubuntu & RaspbianOS","level":"1.2.1.2.1","depth":4,"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","ref":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","articles":[]}]},"previous":{"title":"YoloV5 Training Env","level":"1.2.1.1.2.1","depth":5,"path":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/yolov5TrainingEnv.md","ref":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/yolov5TrainingEnv.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix","prism","-highlight"],"pluginsConfig":{"theme-gestalt":{"styles":{"website":"styles/website.css"},"showLevel":false,"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":true},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"copy-code-button":{},"styles-sass-fix":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1695090896838.css"}},"file":{"path":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/DFCEnv.md","mtime":"2023-09-18T07:53:52.980Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-19T02:34:56.176Z"},"basePath":"../../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"DFC Env","level":"1.2.1.1.2.2","depth":5,"next":{"title":"Running","level":"1.2.1.2","depth":3,"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/RunningEnv.md","ref":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/RunningEnv.md","articles":[{"title":"Ubuntu & RaspbianOS","level":"1.2.1.2.1","depth":4,"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","ref":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","articles":[]}]},"previous":{"title":"Basic Setup","level":"1.2.1.1.2.1","depth":5,"path":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/BasicSetup.md","ref":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/BasicSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix","prism","-highlight","youtube"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"styles-sass-fix":{},"youtube":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1695111800403.css"}},"file":{"path":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/DFCEnv.md","mtime":"2023-09-19T06:08:32.059Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-19T08:23:19.728Z"},"basePath":"../../../../../..","book":{"language":""}});
         });
     </script>
 </div>

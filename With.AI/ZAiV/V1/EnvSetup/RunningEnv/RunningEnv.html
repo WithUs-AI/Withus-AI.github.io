@@ -34,7 +34,7 @@
 
     
         
-        <link rel="stylesheet" href="../../../../../website-1695090896838.css">
+        <link rel="stylesheet" href="../../../../../website-1695111800403.css">
         
     
 
@@ -212,13 +212,13 @@
         <li class="chapter 
               "
             data-level="1.2.1.1.2.1" 
-            data-path="../DevEnv/Ubuntu/yolov5TrainingEnv.html">
+            data-path="../DevEnv/Ubuntu/BasicSetup.html">
 
             
-                <a href="../DevEnv/Ubuntu/yolov5TrainingEnv.html">
+                <a href="../DevEnv/Ubuntu/BasicSetup.html">
             
                     
-                    YoloV5 Training Env
+                    Basic Setup
             
                 </a>
             
@@ -306,7 +306,7 @@
         <li class="chapter 
               "
             data-level="1.2.2" 
-            data-path="../../TrainingModel.md">
+            data-path="../../Training/Training.md">
 
             
                 <span>
@@ -326,17 +326,42 @@
         <li class="chapter 
               "
             data-level="1.2.2.1" 
-            data-path="../../Training/YOLOv5.md">
+            data-path="../../Training/Ubuntu.md">
 
             
                 <span>
             
                     
-                    YOLOv5
+                    Ubuntu
             
                 </a>
             
 
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2.2.1.1" 
+            data-path="../../Training/Ubuntu/yolov5Training.html">
+
+            
+                <a href="../../Training/Ubuntu/yolov5Training.html">
+            
+                    
+                    YoloV5 Training Env
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -457,17 +482,60 @@
         <li class="chapter 
               "
             data-level="1.2.4.1.1" 
-            data-path="../../Inference/Hailo/YoloV5.html">
+            >
 
             
-                <a href="../../Inference/Hailo/YoloV5.html">
+                <span>
             
                     
                     YOLOv5
             
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2.4.1.1.1" 
+            data-path="../../Inference/Hailo/YoloV5/PCI.html">
+
+            
+                <a href="../../Inference/Hailo/YoloV5/PCI.html">
+            
+                    
+                    PCI Interface
+            
                 </a>
             
 
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2.4.1.1.2" 
+            data-path="../../Inference/Hailo/YoloV5/Ethernet.html">
+
+            
+                <a href="../../Inference/Hailo/YoloV5/Ethernet.html">
+            
+                    
+                    USB & Etherent Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -523,13 +591,43 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="running-environment-for-zaiv">Running Environment for ZAiV</h1>
-<p>&#xC2E4;&#xD589;(&#xCD94;&#xB860;) &#xAC00;&#xB2A5;&#xD55C; &#xD658;&#xACBD;&#xC740; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<pre class="language-"><code>* X86/AMD64(Ubuntu)
-* Raspberry PI Model B(RasbianOS)
-* Raspberry PI CM4(RasbianOS)
-* Jetson Nano(Ubuntu)
-</code></pre>
+                                <h1 id="running">Running</h1>
+<h2 id="&#xC2E4;&#xD589;&#xCD94;&#xB860;-&#xAC00;&#xB2A5;-&#xD658;&#xACBD;">&#xC2E4;&#xD589;(&#xCD94;&#xB860;) &#xAC00;&#xB2A5; &#xD658;&#xACBD;</h2>
+<ul>
+<li><p>X86/AMD64</p>
+<ul>
+<li>Ubuntu 18.04, 20.04 - USB/Ethernet Interface</li>
+</ul>
+</li>
+<li><p>Raspberry PI Model B</p>
+<ul>
+<li>RasbianOS - USB/Ethernet Interface</li>
+</ul>
+</li>
+<li><p>Raspberry PI CM4</p>
+<ul>
+<li>RasbianOS - PCI Interface</li>
+</ul>
+</li>
+<li><p>RockChip RK3588 CM5 (To Be Supported)</p>
+<ul>
+<li>Ubuntu - PCI Interface</li>
+</ul>
+</li>
+<li><p>Jetson Nano</p>
+<ul>
+<li>Ubuntu 18.04 - USB/Ethernet Interface</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#xC0AC;&#xC804;-&#xC900;&#xBE44;-&#xD30C;&#xC77C;">&#xC0AC;&#xC804; &#xC900;&#xBE44; &#xD30C;&#xC77C;</h2>
+<ul>
+<li>hailort_4.12.0_arm64.deb<ul>
+<li>&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;: <a href="https://drive.google.com/file/d/1cky_3syTX7KA0JrOJecIu9vMbxrrFkAH/view?usp=sharing" target="_blank">https://drive.google.com/file/d/1cky_3syTX7KA0JrOJecIu9vMbxrrFkAH/view?usp=sharing</a></li>
+</ul>
+</li>
+</ul>
+
                                 
                                 </section>
                             
@@ -572,7 +670,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Running","level":"1.2.1.2","depth":3,"next":{"title":"Ubuntu & RaspbianOS","level":"1.2.1.2.1","depth":4,"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","ref":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","articles":[]},"previous":{"title":"DFC Env","level":"1.2.1.1.2.2","depth":5,"path":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/DFCEnv.md","ref":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/DFCEnv.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix","prism","-highlight"],"pluginsConfig":{"theme-gestalt":{"styles":{"website":"styles/website.css"},"showLevel":false,"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":true},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"copy-code-button":{},"styles-sass-fix":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1695090896838.css"}},"file":{"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/RunningEnv.md","mtime":"2023-09-18T05:53:18.282Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-19T02:34:56.176Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Running","level":"1.2.1.2","depth":3,"next":{"title":"Ubuntu & RaspbianOS","level":"1.2.1.2.1","depth":4,"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","ref":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/ubuntu.md","articles":[]},"previous":{"title":"DFC Env","level":"1.2.1.1.2.2","depth":5,"path":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/DFCEnv.md","ref":"With.AI/ZAiV/V1/EnvSetup/DevEnv/Ubuntu/DFCEnv.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix","prism","-highlight","youtube"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"styles-sass-fix":{},"youtube":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1695111800403.css"}},"file":{"path":"With.AI/ZAiV/V1/EnvSetup/RunningEnv/RunningEnv.md","mtime":"2023-09-19T08:15:13.958Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-19T08:23:19.728Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -2995,6 +2995,9 @@ dd {
   width: 33%; }
 
 .navigation {
+  display: none !important; }
+
+.navigation {
   position: absolute;
   top: 50px;
   bottom: 0px;
