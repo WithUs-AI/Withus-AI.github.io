@@ -11,11 +11,11 @@ $sidebar-width                      : 350px !default;
 $sidebar-transition-duration        : 250ms !default;
 
 // The increment of padding used throughout the sidebar
-$sidebar-padding-unit               : $spacing-unit;
+$sidebar-padding-unit               : 10px;
 // The amount of horizontal padding for each section of the sidebar
-$sidebar-padding-h                  : $sidebar-padding-unit * 2;
+$sidebar-padding-h                  : 10px;
 // The amount of vertical padding for each section of the sidebar
-$sidebar-padding-v                  : $sidebar-padding-unit * 0.5;
+$sidebar-padding-v                  : 5px;
 
 // The text color of the sidebar
 $sidebar-color                      : hsl(207, 15%, 25%) !default;
@@ -40,11 +40,11 @@ $sidebar-logo-height                : 70px !default;
 
 
 // The amount of indentation for each level of nav links
-$sidebar-nested-padding             : $sidebar-padding-unit !default;
+$sidebar-nested-padding             : 30px !default;
 // Hides/shows nested levels when not active
-$sidebar-show-nested-levels         : false;
+$sidebar-show-nested-levels         : true;
 // The vertical padding between links
-$sidebar-link-padding-v             : $sidebar-padding-unit !default;
+$sidebar-link-padding-v             : 3px !default;
 // The horizontal padding on the sides of links
 $sidebar-link-padding-h             : 0 !default;
 

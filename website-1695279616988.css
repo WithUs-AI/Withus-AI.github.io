@@ -2665,7 +2665,7 @@ body {
   display: none; }
 
 .book-logo {
-  padding: 5px 20px;
+  padding: 5px 10px;
   background: #1a1a1a;
   border-bottom: 1px solid #4d4d4d; }
 
@@ -2708,17 +2708,14 @@ body {
 .book-summary ul.summary {
   list-style: none;
   margin: 0;
-  padding: 5px 20px;
+  padding: 5px 10px;
   transition: top 0.5s ease; }
-
-.book-summary .hide {
-  display: none !important; }
 
 .book-summary ul.summary li {
   list-style: none; }
 
 .book-summary ul.summary li.header {
-  padding: 10px 0;
+  padding: 3px 0;
   padding-top: 20px;
   color: #939da3;
   text-transform: uppercase;
@@ -2743,7 +2740,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding: 10px 0;
+  padding: 3px 0;
   border-bottom: none;
   color: #cccccc;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -2758,7 +2755,7 @@ body {
   text-decoration: none; }
 
 .book-summary ul.summary li ul {
-  padding-left: 10px; }
+  padding-left: 30px; }
 
 a {
   color: #cccccc;
@@ -3035,7 +3032,7 @@ dd {
   left: 0px; }
 
 #book-search-input {
-  padding: 1.25px 20px;
+  padding: 1.25px 10px;
   transition: top 0.5s ease;
   background: gray;
   border-bottom: 1px solid #4d4d4d; }
