@@ -159,7 +159,7 @@ $sidebar-divider-map                : ( background: $color-border ) !default;
 }
 
 // Hide nested levels when not active
-.book-summary .hide { @if $sidebar-show-nested-levels == false { display: none !important } }
+.book-summary .hide { @if $sidebar-show-nested-levels == true { display: none !important } }
 
 .book-summary ul.summary li { list-style: none; }
 

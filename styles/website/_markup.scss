@@ -59,11 +59,11 @@ $table-map                          : () !default;
 
 // Styling for TR elements
 $table-tr-map                       : (
-                                        background-color: white,
+                                        background-color: $page-table-background,
                                         border-top: 1px solid $color-gray-lighter
                                     ) !default;
 // Styling for even-numbered rows
-$table-tr-2-map                     : ( background-color: $color-gray-lightest ) !default;
+$table-tr-2-map                     : ( background-color: $page-table-background-lighter ) !default;
 
 // Styling for TD elements
 $table-td-map                       : (
