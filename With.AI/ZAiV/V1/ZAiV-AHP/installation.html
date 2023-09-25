@@ -34,7 +34,7 @@
 
     
         
-        <link rel="stylesheet" href="../../../../website-1695369888515.css">
+        <link rel="stylesheet" href="../../../../website-1695619009961.css">
         
     
 
@@ -722,8 +722,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="installation">Installation</h1>
-<h2 id="prepare">Prepare</h2>
+                                <h1 id="&#xC124;&#xCE58;">&#xC124;&#xCE58;</h1>
+<h2 id="&#xC900;&#xBE44;">&#xC900;&#xBE44;</h2>
 <ul>
 <li>ZAiV-AHP Board</li>
 <li>AP Board (Prepare one of the list)<ul>
@@ -732,7 +732,61 @@
 </ul>
 </li>
 <li>5V/3A USB Type-C Power Adapter</li>
-<li>32GB Micro SD Card</li>
+<li>Micro SD Card (32GB or more)</li>
+<li>USB Webcam</li>
+<li>&#xBAA8;&#xB2C8;&#xD130; (HdMI &#xC9C0;&#xC6D0;)</li>
+<li>USB 2.0 &#xD1B5;&#xD569; &#xB9C8;&#xC6B0;&#xC2A4;/&#xD0A4;&#xBCF4;&#xB4DC; (&#xD1B5;&#xD569; &#xB9C8;&#xC6B0;&#xC2A4;/&#xD0A4;&#xBCF4;&#xB4DC;&#xAC00; &#xC5C6;&#xB294; &#xACBD;&#xC6B0;, USB 2.0 &#xD5C8;&#xBE0C;&#xB97C; &#xC900;&#xBE44;&#xD569;&#xB2C8;&#xB2E4;.)</li>
+<li>&#xCF00;&#xC774;&#xBE14;&#xB958;<ul>
+<li>Micro HDMI to HDMI Cable</li>
+<li>Ethernet Cable</li>
+<li>USB to Micro 5Pin Cable</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#xC678;&#xBD80;-&#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;">&#xC678;&#xBD80; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;</h2>
+<p><img src="../../../../assets/ZAiV-AHP_Interfaces.png" alt="ZAiV-AHP Interfaces"></p>
+<ol>
+<li>Raspberry PI CM4 or Radxa CM5 Modlue Slot</li>
+<li>5V/3A Power (USB Type-C Connector)</li>
+<li>Micro HDMI</li>
+<li>USB 2.0 x 2</li>
+<li>Gigabit Ethernet (RJ45)</li>
+<li>USB to UART (micro 5pin)</li>
+<li>IO Interfaces (2.54mm Pitch 2x20 Header)<ul>
+<li><img src="../../../../assets/ZAiV-AHP_header.png" alt="ZAiV-AHP Header"></li>
+</ul>
+</li>
+<li>External Fan (SMW200-02 Connector)<ul>
+<li>Pin 1 : 5V</li>
+<li>Pin 2 : GND</li>
+</ul>
+</li>
+<li>nRPI BOOT &amp; USB_OTG<ul>
+<li>Pin 1 : nRPIBOOT (CM4_BOOT)<ul>
+<li>A low on this pin forces booting from an &quot;RPI server&quot; (PC or another RPi);</li>
+<li>if not used, leave floating.</li>
+<li>Internally 10K pull up to 3.3V</li>
+</ul>
+</li>
+<li>Pin 2 : USB_OTG_ID (but the correct OS driver also needs to be used.)<ul>
+<li>Input(3.3V) USB OTG Pin.</li>
+<li>Internally pulled up.</li>
+<li>When grounded the CM4 becomes a USB host</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Micro SD Slot</li>
+</ol>
+<h2 id="&#xAE30;&#xBCF8;-&#xC5F0;&#xACB0;">&#xAE30;&#xBCF8; &#xC5F0;&#xACB0;</h2>
+<ul>
+<li>Raspberry Pi &#xC774;&#xBBF8;&#xC9C0;&#xAC00; &#xC124;&#xCE58;&#xB41C; Micro SD&#xCE74;&#xB4DC;&#xB97C; Micro SD&#xCE74;&#xB4DC; &#xC2AC;&#xB86F;&#xC5D0; &#xC0BD;&#xC785;&#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>&#xBAA8;&#xB2C8;&#xD130;&#xC758; &#xC804;&#xC6D0;&#xC744; &#xC5F0;&#xACB0;&#xD558;&#xACE0; &#xBAA8;&#xB2C8;&#xD130;&#xC640; ZAiV-AHP&#xAC04;&#xC5D0; micro HDMI to HDMI &#xCF00;&#xC774;&#xBE14;&#xC744; &#xC5F0;&#xACB0;&#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>USB &#xD0A4;&#xBCF4;&#xB4DC;/&#xB9C8;&#xC6B0;&#xC2A4;&#xB97C; &#xC5F0;&#xACB0;&#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>&#xC778;&#xD130;&#xB137;&#xC774; &#xAC00;&#xB2A5;&#xD55C; Etherent Cable&#xC744; RJ45 &#xD3EC;&#xD2B8;&#xC5D0; &#xC5F0;&#xACB0;&#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>USB Webcam&#xC744; &#xC5F0;&#xACB0;&#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>UART&#xB97C; &#xD1B5;&#xD55C; &#xB514;&#xBC84;&#xAE45;&#xC774; &#xD544;&#xC694;&#xD55C; &#xACBD;&#xC6B0;, Micro USB &#xCF00;&#xC774;&#xBE14;&#xC744; &#xC5F0;&#xACB0;&#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>&#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C; USB Type-C Power Adapter&#xB97C; &#xC5F0;&#xACB0;&#xD569;&#xB2C8;&#xB2E4;.</li>
 </ul>
 
                                 
@@ -777,7 +831,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"installation","level":"1.2.2","depth":2,"next":{"title":"Guides","level":"1.2.3","depth":2,"path":"With.AI/ZAiV/V1/ZAiV-AHP/guides.md","ref":"With.AI/ZAiV/V1/ZAiV-AHP/guides.md","articles":[]},"previous":{"title":"getting started","level":"1.2.1","depth":2,"path":"With.AI/ZAiV/V1/ZAiV-AHP/gettingStarted.md","ref":"With.AI/ZAiV/V1/ZAiV-AHP/gettingStarted.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix","prism","-highlight","youtube"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"styles-sass-fix":{},"youtube":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1695369888515.css"}},"file":{"path":"With.AI/ZAiV/V1/ZAiV-AHP/installation.md","mtime":"2023-09-22T00:55:19.105Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-22T08:04:47.802Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"installation","level":"1.2.2","depth":2,"next":{"title":"Guides","level":"1.2.3","depth":2,"path":"With.AI/ZAiV/V1/ZAiV-AHP/guides.md","ref":"With.AI/ZAiV/V1/ZAiV-AHP/guides.md","articles":[]},"previous":{"title":"getting started","level":"1.2.1","depth":2,"path":"With.AI/ZAiV/V1/ZAiV-AHP/gettingStarted.md","ref":"With.AI/ZAiV/V1/ZAiV-AHP/gettingStarted.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix","prism","-highlight","youtube"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"styles-sass-fix":{},"youtube":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1695619009961.css"}},"file":{"path":"With.AI/ZAiV/V1/ZAiV-AHP/installation.md","mtime":"2023-09-25T05:16:18.644Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-25T05:16:49.254Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
