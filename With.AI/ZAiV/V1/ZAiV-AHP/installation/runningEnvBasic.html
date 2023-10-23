@@ -38,7 +38,7 @@
 
     
         
-        <link rel="stylesheet" href="../../../../../website-1698025451569.css">
+        <link rel="stylesheet" href="../../../../../website-1698038206629.css">
         
     
 
@@ -1057,20 +1057,17 @@ MicroSD&#xCE74;&#xB4DC;&#xB97C; Reader&#xAE30;&#xC5D0; &#xACB0;&#xD569; &#xD6C4;
 </code></pre>
 </li>
 <li><p>Tappas &#xC758;&#xC874;&#xC131; &#xD328;&#xD0A4;&#xAE30; &#xC124;&#xCE58; (&#xC0AC;&#xC6A9; &#xC2DC; &#xC124;&#xCE58;)</p>
+<ul>
+<li><p>Raspbian OS</p>
+<pre class="language-"><code class="lang-bash">  <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token parameter variable">-y</span> <span class="token function">rsync</span> ffmpeg x11-utils python3-dev python3-pip python3-setuptools python3-virtualenv python-gi-dev libgirepository1.0-dev cmake <span class="token function">git</span> libzmq3-dev
+</code></pre>
+</li>
+<li><p>Ubuntu</p>
+<pre class="language-"><code class="lang-bash">  <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token parameter variable">-y</span> <span class="token function">rsync</span> ffmpeg x11-utils python3-dev python3-pip python3-setuptools python3-virtualenv python-gi-dev libgirepository1.0-dev gcc-9 g++-9 cmake <span class="token function">git</span> libzmq3-dev
+</code></pre>
 </li>
 </ul>
-<pre class="language-"><code>* Raspbian OS
-
-```bash
-sudo apt-get install -y rsync ffmpeg x11-utils python3-dev python3-pip python3-setuptools python3-virtualenv python-gi-dev libgirepository1.0-dev cmake git libzmq3-dev
-```
-
-* Ubuntu
-
-```bash
-sudo apt-get install -y rsync ffmpeg x11-utils python3-dev python3-pip python3-setuptools python3-virtualenv python-gi-dev libgirepository1.0-dev gcc-9 g++-9 cmake git libzmq3-dev
-```
-</code></pre><ul>
+</li>
 <li><p>PCI &#xC885;&#xC18D;&#xC131; &#xC124;&#xCE58;</p>
 <pre class="language-"><code class="lang-bash">
   <span class="token comment"># PCI &#xB4DC;&#xB77C;&#xC774;&#xBC84; &#xC124;&#xCE58; (PCI Interface &#xC81C;&#xD488;&#xAD70; &#xC0AC;&#xC6A9;&#xC2DC; &#xC124;&#xCE58;)</span>
@@ -1083,18 +1080,17 @@ sudo apt-get install -y rsync ffmpeg x11-utils python3-dev python3-pip python3-s
 </li>
 </ul>
 <h4 id="hailort-&#xC124;&#xCE58;"><a name="hailort-&#xC124;&#xCE58;" class="anchor-navigation-ex-anchor" href="#hailort-&#xC124;&#xCE58;"><i class="fa fa-link" aria-hidden="true"></i></a>HailoRT &#xC124;&#xCE58;</h4>
-<pre class="language-"><code>* arm (raspberry pi)
-
-```bash
-sudo dpkg -i hailort_4.12.0_arm64.deb
-```
-
-* amd64 (pc)
-
-```bash
-sudo dpkg -i hailort_4.13.0_amd64.deb
-```
-</code></pre><h4 id="gstreamer-&#xC124;&#xCE58;"><a name="gstreamer-&#xC124;&#xCE58;" class="anchor-navigation-ex-anchor" href="#gstreamer-&#xC124;&#xCE58;"><i class="fa fa-link" aria-hidden="true"></i></a>GStreamer &#xC124;&#xCE58;</h4>
+<ul>
+<li><p>arm (raspberry pi)</p>
+<pre class="language-"><code class="lang-bash">  <span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> hailort_4.12.0_arm64.deb
+</code></pre>
+</li>
+<li><p>amd64 (pc)</p>
+<pre class="language-"><code class="lang-bash">  <span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> hailort_4.13.0_amd64.deb
+</code></pre>
+</li>
+</ul>
+<h4 id="gstreamer-&#xC124;&#xCE58;"><a name="gstreamer-&#xC124;&#xCE58;" class="anchor-navigation-ex-anchor" href="#gstreamer-&#xC124;&#xCE58;"><i class="fa fa-link" aria-hidden="true"></i></a>GStreamer &#xC124;&#xCE58;</h4>
 <pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token parameter variable">-y</span> libcairo2-dev libgirepository1.0-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio python-gi-dev
 </code></pre>
 <h4 id="opencv-&#xC124;&#xCE58;"><a name="opencv-&#xC124;&#xCE58;" class="anchor-navigation-ex-anchor" href="#opencv-&#xC124;&#xCE58;"><i class="fa fa-link" aria-hidden="true"></i></a>Opencv &#xC124;&#xCE58;</h4>
@@ -1134,23 +1130,28 @@ cmake <span class="token parameter variable">-DOPENCV_GENERATE_PKGCONFIG</span><
 <p>&#xAE30;&#xBCF8; &#xC124;&#xCE58;&#xB294; &#xC644;&#xB8CC;&#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.
 &#xC774; &#xD6C4; &#xC7AC;&#xBD80;&#xD305; &#xD569;&#xB2C8;&#xB2E4;.</p>
 <ul>
-<li>&#xCC38;&#xACE0;
-  PCI&#xC758; &#xACBD;&#xC6B0; &#xC7AC; &#xBD80;&#xD305; &#xD6C4; hailo_pci Driver&#xB97C; &#xC62C;&#xB824;&#xC57C;&#xD569;&#xB2C8;&#xB2E4;.</li>
-</ul>
-<pre class="language-"><code>```bash
-sudo modprobe hailo_pci
-
-# &#xBD80;&#xD305; &#xC2DC; &#xB9E4;&#xBC88; &#xD574;&#xC904; &#xC218;&#xB294; &#xC5C6;&#xC73C;&#xBBC0;&#xB85C; rc&#xD30C;&#xC77C;&#xC5D0; &#xB4F1;&#xB85D;&#xD569;&#xB2C8;&#xB2E4;.
-
-# Bash Shell&#xC758; &#xACBD;&#xC6B0;
-echo &quot;modprobe hailo_pci&quot; &gt;&gt; ~/.bashrc
-
-
-# zsh&#xC758; &#xACBD;&#xC6B0;
-echo &quot;modprobe hailo_pci&quot; &gt;&gt; ~/.zshrc
-
-```
+<li><p>&#xCC38;&#xACE0;</p>
+<ul>
+<li><p>PCI&#xC758; &#xACBD;&#xC6B0; &#xC7AC; &#xBD80;&#xD305; &#xD6C4; hailo_pci Driver&#xB97C; &#xC62C;&#xB824;&#xC57C;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> modprobe hailo_pci
 </code></pre>
+</li>
+<li><p>&#xBD80;&#xD305; &#xC2DC; &#xC790;&#xB3D9; &#xC2E4;&#xD589;&#xD558;&#xB3C4;&#xB85D; &#xD558;&#xB294; &#xACBD;&#xC6B0;, rc&#xD30C;&#xC77C;&#xC5D0; &#xB4F1;&#xB85D;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<ul>
+<li><p>Bash Shell&#xC758; &#xACBD;&#xC6B0;</p>
+<pre class="language-"><code class="lang-bash">  <span class="token builtin class-name">echo</span> <span class="token string">&quot;modprobe hailo_pci&quot;</span> <span class="token operator">&gt;&gt;</span> ~/.bashrc
+</code></pre>
+</li>
+<li><p>zsh&#xC758; &#xACBD;&#xC6B0;</p>
+<pre class="language-"><code class="lang-bash">  <span class="token builtin class-name">echo</span> <span class="token string">&quot;modprobe hailo_pci&quot;</span> <span class="token operator">&gt;&gt;</span> ~/.zshrc
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
                                 
                                 </section>
                             
@@ -1193,7 +1194,7 @@ echo &quot;modprobe hailo_pci&quot; &gt;&gt; ~/.zshrc
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"실행환경 - 기본","level":"1.2.1.3","depth":3,"next":{"title":"실행환경 - ROS(RaspbianOS)","level":"1.2.1.4","depth":3,"path":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvRosNoeticRaspbianOsBuster.md","ref":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvRosNoeticRaspbianOsBuster.md","articles":[]},"previous":{"title":"학습 및 컴파일 환경","level":"1.2.1.2","depth":3,"path":"With.AI/ZAiV/V1/ZAiV-AHP/installation/trainEnv.md","ref":"With.AI/ZAiV/V1/ZAiV-AHP/installation/trainEnv.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix","prism","-highlight","youtube","anchor-navigation-ex-toc"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"styles-sass-fix":{},"youtube":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"showLevel":true,"mode":"float","showGoTop":true,"float":{"showLevelIcon":true,"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right"}},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1698025451569.css"}},"file":{"path":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvBasic.md","mtime":"2023-10-23T01:25:35.083Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-10-23T01:44:10.853Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"실행환경 - 기본","level":"1.2.1.3","depth":3,"next":{"title":"실행환경 - ROS(RaspbianOS)","level":"1.2.1.4","depth":3,"path":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvRosNoeticRaspbianOsBuster.md","ref":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvRosNoeticRaspbianOsBuster.md","articles":[]},"previous":{"title":"학습 및 컴파일 환경","level":"1.2.1.2","depth":3,"path":"With.AI/ZAiV/V1/ZAiV-AHP/installation/trainEnv.md","ref":"With.AI/ZAiV/V1/ZAiV-AHP/installation/trainEnv.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix","prism","-highlight","youtube","anchor-navigation-ex-toc"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"styles-sass-fix":{},"youtube":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"showLevel":true,"mode":"float","showGoTop":true,"float":{"showLevelIcon":true,"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right"}},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1698038206629.css"}},"file":{"path":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvBasic.md","mtime":"2023-10-23T02:49:44.765Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-10-23T05:16:45.852Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -38,7 +38,7 @@
 
     
         
-        <link rel="stylesheet" href="../../../../../website-1698025451569.css">
+        <link rel="stylesheet" href="../../../../../website-1698038206629.css">
         
     
 
@@ -947,7 +947,10 @@
 <ul>
 <li><p>rosdep init</p>
 <pre class="language-"><code class="lang-bash">  <span class="token function">sudo</span> rosdep init
+  <span class="token function">cat</span> /etc/ros/rosdep/sources.list.d/20-default.list
 </code></pre>
+<ul>
+<li><p>&#xCD9C;&#xB825;</p>
 <pre class="language-"><code class="lang-bash">  <span class="token comment"># &#xCD5C;&#xC2E0; &#xBC30;&#xD3EC;&#xD310;(Groovy, Hydro &#xB4F1;)&#xC740; &#xB354; &#xC774;&#xC0C1; &#xB098;&#xC5F4;&#xB418;&#xC5B4;&#xC11C;&#xB294; &#xC548; &#xB418;&#xBA70; &#xB300;&#xC2E0; rosdistro index.yaml&#xC5D0;&#xC11C; &#xAC00;&#xC838;&#xC635;&#xB2C8;&#xB2E4;.</span>
   <span class="token comment"># &#xCD9C;&#xB825;</span>
   $ <span class="token function">cat</span> /etc/ros/rosdep/sources.list.d/20-default.list
@@ -960,9 +963,13 @@
   gbpdistro https://raw.githubusercontent.com/ros/rosdistro/master/releases/fuerte.yaml fuerte
 </code></pre>
 </li>
+</ul>
+</li>
 <li><p>rosdep update</p>
 <pre class="language-"><code class="lang-bash">  <span class="token function">sudo</span> rosdep update
 </code></pre>
+<ul>
+<li><p>&#xCD9C;&#xB825;</p>
 <pre class="language-"><code class="lang-bash">  <span class="token comment"># &#xCD9C;&#xB825;</span>
   reading <span class="token keyword">in</span> sources list data from /etc/ros/rosdep/sources.list.d
   Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml
@@ -990,6 +997,8 @@
 </code></pre>
 <h2 id="fetch--install-ros-noetic-dependencies"><a name="fetch--install-ros-noetic-dependencies" class="anchor-navigation-ex-anchor" href="#fetch--install-ros-noetic-dependencies"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. Fetch &amp; Install ROS Noetic dependencies</h2>
 </li>
+</ul>
+</li>
 <li><p>&#xD3F4;&#xB354; &#xC0DD;&#xC131;</p>
 <pre class="language-"><code class="lang-bash">  <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> ~/work/ros_catkin_ws
   <span class="token builtin class-name">cd</span> ~/work/ros_catkin_ws
@@ -999,14 +1008,17 @@
 <pre class="language-"><code class="lang-bash">  rosinstall_generator ros_comm <span class="token parameter variable">--rosdistro</span> noetic <span class="token parameter variable">--deps</span> --wet-only <span class="token parameter variable">--tar</span> <span class="token operator">&gt;</span> noetic-ros_comm-wet.rosinstall
 </code></pre>
 <p>  <img src="https://i0.wp.com/varhowto.com/wp-content/uploads/2020/06/rosinstall_generator-ros_comm-rosdistro-noetic-deps-wet-only-tar-noetic-ros_comm-wet.rosinstall.png?resize=768%2C377&amp;ssl=1" alt="Install Gen"></p>
-<pre class="language-"><code class="lang-bash">  <span class="token comment"># &#xCC38;&#xACE0;.</span>
-  <span class="token comment"># desktop-full &#xBA54;&#xD0C0; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC2DC;&#xB3C4;&#xD588;&#xC9C0;&#xB9CC; &#xC9C0;&#xC6D0;&#xC548;&#xB428;</span>
+<ul>
+<li><p>&#xCC38;&#xACE0;</p>
+<pre class="language-"><code class="lang-bash">  <span class="token comment"># desktop-full &#xBA54;&#xD0C0; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC2DC;&#xB3C4;&#xD588;&#xC9C0;&#xB9CC; &#xC9C0;&#xC6D0;&#xC548;&#xB428;</span>
   The following unreleased packages/stacks will be ignored: desktop-full
   No packages/stacks left after ignoring unreleased
 
   <span class="token comment"># desktop &#xBA54;&#xD0C0; &#xD328;&#xD0A4;&#xC9C0;&#xB294; &#xC0AC;&#xC6A9;&#xD588;&#xC9C0;&#xB9CC;, rviz&#xB97C; &#xCEF4;&#xD30C;&#xC77C;&#xD558;&#xAE30;&#xC5D0; &#xBA54;&#xBAA8;&#xB9AC;&#xAC00; &#xCDA9;&#xBD84;&#xD558;&#xC9C0; &#xC54A;&#xC558;&#xC74C;.</span>
   c++: fatal error: Killed signal terminated program cc1plus
 </code></pre>
+</li>
+</ul>
 </li>
 <li><p>&#xB85C;&#xCEEC;&#xB85C; &#xC6D0;&#xACA9;&#xC800;&#xC7A5;&#xC18C; Get</p>
 <pre class="language-"><code class="lang-bash">  wstool init src noetic-ros_comm-wet.rosinstall
@@ -1026,8 +1038,10 @@
 <pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> dphys-swapfile swapoff
 </code></pre>
 <p>&#xADF8;&#xB7F0; &#xB2E4;&#xC74C; &#xC544;&#xB798; &#xD30C;&#xC77C;&#xC744; &#xD3B8;&#xC9D1;&#xD558;&#xC5EC; &#xC2A4;&#xC651; &#xACF5;&#xAC04;&#xC744; 100MB&#xC5D0;&#xC11C; 1024MB(1GB)&#xB85C; &#xB298;&#xB9BD;&#xB2C8;&#xB2E4;. &#xC544;&#xC2DC;&#xB2E4;&#xC2DC;&#xD53C; 100MB&#xB294; &#xB9E4;&#xC6B0; &#xC791;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<ul>
+<li>CONF_SWAPSIZE=100 -    CONF_SWAPSIZE=1024</li>
+</ul>
 <pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">vi</span> /etc/dphys-swapfile
-<span class="token comment"># CONF_SWAPSIZE=100 -&gt; CONF_SWAPSIZE=1024</span>
 </code></pre>
 <p><img src="https://i0.wp.com/varhowto.com/wp-content/uploads/2020/12/sudoedit-etc-dphys-swapfile-on-raspberry-pi-4-for-ros-noetic-installation.png.png?resize=768%2C574&amp;ssl=1" alt="Swap File"></p>
 <ul>
@@ -1047,36 +1061,33 @@
 <li><p>&#xCEF4;&#xD30C;&#xC77C;</p>
 <pre class="language-"><code class="lang-bash">  <span class="token function">sudo</span> src/catkin/bin/catkin_make_isolated <span class="token parameter variable">--install</span> <span class="token parameter variable">-DCMAKE_BUILD_TYPE</span><span class="token operator">=</span>Release --install-space /opt/ros/noetic <span class="token parameter variable">-j1</span> <span class="token parameter variable">-DPYTHON_EXECUTABLE</span><span class="token operator">=</span>/usr/bin/python3
 </code></pre>
+<ul>
+<li><p>&#xCC38;&#xACE0;</p>
+<p>&#xC5EC;&#xAE30;&#xC11C;&#xB294; 4&#xAC1C;&#xC758; &#xCD94;&#xAC00; &#xC778;&#xC218;&#xB97C; &#xC804;&#xB2EC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<ul>
+<li><p>-DCMAKE_BUILD_TYPE=Release</p>
+<p>  &#xB9B4;&#xB9AC;&#xC2A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xB514;&#xBC84;&#xADF8; &#xAE30;&#xD638;&#xAC00; &#xC0DD;&#xC131;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+</li>
+<li><p>--install-space /opt/ros/noetic</p>
+<p>  /opt/ros/noeticUbuntu&#xC5D0; Noetic&#xC744; &#xC124;&#xCE58;&#xD558;&#xB294; &#xAC83;&#xCC98;&#xB7FC; &#xBAA8;&#xB4E0; &#xAC83;&#xC774; &#xC5D0; &#xC124;&#xCE58;&#xB429;&#xB2C8;&#xB2E4; .</p>
+</li>
+<li><p>-j1</p>
+<p>  &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; catkin&#xC740; &#xCEF4;&#xD30C;&#xC77C; &#xC791;&#xC5C5;&#xC5D0; &#xBAA8;&#xB4E0; &#xCF54;&#xC5B4;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0;&#xB9CC;, Raspberry Pi 4&#xC5D0;&#xC11C;&#xB294; &#xBA54;&#xBAA8;&#xB9AC;&#xAC00; &#xC81C;&#xD55C;&#xB418;&#xC5B4; &#xC788;&#xACE0; &#xBAA8;&#xB4E0; &#xCEF4;&#xD30C;&#xC77C; &#xC791;&#xC5C5;&#xC774;     &#xBA54;&#xBAA8;&#xB9AC;&#xB97C; &#xC18C;&#xBE44;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBB38;&#xC81C;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;. &#xC791;&#xC5C5; &#xC218;&#xB97C; 1&#xB85C; &#xC81C;&#xD55C;&#xD558;&#xBA74; &#xBA54;&#xBAA8;&#xB9AC; &#xBD80;&#xC871; &#xBB38;&#xC81C;&#xAC00; &#xBC1C;&#xC0DD;&#xD560; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xC904;&#xC5B4;&#xB4ED;&#xB2C8;&#xB2E4;.</p>
+</li>
+<li><p>-DPYTHON_EXECUTABLE=/usr/bin/python3</p>
+<p>  &#xC5EC;&#xAE30;&#xC11C;&#xB294; Python3&#xC744; Python &#xC2E4;&#xD589; &#xD30C;&#xC77C;&#xB85C; &#xC9C0;&#xC815;&#xD569;&#xB2C8;&#xB2E4;. Melodic&#xACFC; &#xAC19;&#xC740; &#xC774;&#xC804; ROS &#xBC30;&#xD3EC;&#xD310;&#xACFC; &#xB2E4;&#xB974;&#xBBC0;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xAC83;&#xC774; &#xB9E4;&#xC6B0; &#xC911;&#xC694;&#xD569;&#xB2C8;&#xB2E4;.</p>
 </li>
 </ul>
-<blockquote>
-<ul>
-<li>&#xCC38;&#xACE0;</li>
+</li>
 </ul>
-<p>&#xC5EC;&#xAE30;&#xC11C;&#xB294; 4&#xAC1C;&#xC758; &#xCD94;&#xAC00; &#xC778;&#xC218;&#xB97C; &#xC804;&#xB2EC;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<p>-DCMAKE_BUILD_TYPE=Release</p>
-<blockquote>
-<p>&#xB9B4;&#xB9AC;&#xC2A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xB514;&#xBC84;&#xADF8; &#xAE30;&#xD638;&#xAC00; &#xC0DD;&#xC131;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-</blockquote>
-<p>--install-space /opt/ros/noetic</p>
-<blockquote>
-<p>/opt/ros/noeticUbuntu&#xC5D0; Noetic&#xC744; &#xC124;&#xCE58;&#xD558;&#xB294; &#xAC83;&#xCC98;&#xB7FC; &#xBAA8;&#xB4E0; &#xAC83;&#xC774; &#xC5D0; &#xC124;&#xCE58;&#xB429;&#xB2C8;&#xB2E4; .</p>
-</blockquote>
-<p>-j1</p>
-<blockquote>
-<p>&#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; catkin&#xC740; &#xCEF4;&#xD30C;&#xC77C; &#xC791;&#xC5C5;&#xC5D0; &#xBAA8;&#xB4E0; &#xCF54;&#xC5B4;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0;&#xB9CC;, Raspberry Pi 4&#xC5D0;&#xC11C;&#xB294; &#xBA54;&#xBAA8;&#xB9AC;&#xAC00; &#xC81C;&#xD55C;&#xB418;&#xC5B4; &#xC788;&#xACE0; &#xBAA8;&#xB4E0; &#xCEF4;&#xD30C;&#xC77C; &#xC791;&#xC5C5;&#xC774; &gt;&#xBA54;&#xBAA8;&#xB9AC;&#xB97C; &#xC18C;&#xBE44;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBB38;&#xC81C;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;. &#xC791;&#xC5C5; &#xC218;&#xB97C; 1&#xB85C; &#xC81C;&#xD55C;&#xD558;&#xBA74; &#xBA54;&#xBAA8;&#xB9AC; &#xBD80;&#xC871; &#xBB38;&#xC81C;&#xAC00; &#xBC1C;&#xC0DD;&#xD560; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xC904;&#xC5B4;&#xB4ED;&#xB2C8;&#xB2E4;.</p>
-</blockquote>
-<p>-DPYTHON_EXECUTABLE=/usr/bin/python3</p>
-<blockquote>
-<p>&#xC5EC;&#xAE30;&#xC11C;&#xB294; Python3&#xC744; Python &#xC2E4;&#xD589; &#xD30C;&#xC77C;&#xB85C; &#xC9C0;&#xC815;&#xD569;&#xB2C8;&#xB2E4;. Melodic&#xACFC; &#xAC19;&#xC740; &#xC774;&#xC804; ROS &#xBC30;&#xD3EC;&#xD310;&#xACFC; &#xB2E4;&#xB974;&#xBBC0;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xAC83;&#xC774; &#xB9E4;&#xC6B0; &#xC911;&#xC694;&#xD569;&#xB2C8;&#xB2E4;.</p>
-</blockquote>
-</blockquote>
+</li>
+</ul>
 <ul>
 <li><p>Released Packages &#xCD94;&#xAC00; &#xC124;&#xCE58;</p>
-<pre class="language-"><code class="lang-bash">  rosinstall_generator ros_comm ros_control joystick_drivers <span class="token parameter variable">--rosdistro</span> noetic <span class="token parameter variable">--deps</span> --wet-only <span class="token parameter variable">--tar</span> <span class="token operator">&gt;</span> noetic-custom_ros.rosinstall
-  rosinstall_generator compressed_image_transport <span class="token parameter variable">--rosdistro</span> noetic <span class="token parameter variable">--deps</span> --wet-only <span class="token parameter variable">--tar</span> <span class="token operator">&gt;</span> noetic-compressed_image_transport-wet.rosinstall
-  rosinstall_generator camera_info_manager <span class="token parameter variable">--rosdistro</span> noetic <span class="token parameter variable">--deps</span> --wet-only <span class="token parameter variable">--tar</span> <span class="token operator">&gt;</span> noetic-camera_info_manager-wet.rosinstall
-  rosinstall_generator dynamic_reconfigure <span class="token parameter variable">--rosdistro</span> noetic <span class="token parameter variable">--deps</span> --wet-only <span class="token parameter variable">--tar</span> <span class="token operator">&gt;</span> noetic-dynamic_reconfigure-wet.rosinstall
+<pre class="language-"><code class="lang-bash">  rosinstall_generator ros_comm ros_control joystick_drivers <span class="token parameter variable">--rosdistro</span> noetic <span class="token parameter variable">--deps</span> --wet-only <span class="token parameter variable">--tar</span>     noetic-custom_ros.rosinstall
+  rosinstall_generator compressed_image_transport <span class="token parameter variable">--rosdistro</span> noetic <span class="token parameter variable">--deps</span> --wet-only <span class="token parameter variable">--tar</span>     noetic-compressed_image_transport-wet.rosinstall
+  rosinstall_generator camera_info_manager <span class="token parameter variable">--rosdistro</span> noetic <span class="token parameter variable">--deps</span> --wet-only <span class="token parameter variable">--tar</span>     noetic-camera_info_manager-wet.rosinstall
+  rosinstall_generator dynamic_reconfigure <span class="token parameter variable">--rosdistro</span> noetic <span class="token parameter variable">--deps</span> --wet-only <span class="token parameter variable">--tar</span>     noetic-dynamic_reconfigure-wet.rosinstall
 
   wstool merge <span class="token parameter variable">-t</span> src noetic-custom_ros.rosinstall
   wstool merge <span class="token parameter variable">-t</span> src noetic-compressed_image_transport-wet.rosinstall
@@ -1132,7 +1143,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"실행환경 - ROS(RaspbianOS)","level":"1.2.1.4","depth":3,"next":{"title":"실행환경 - ROS(Ubuntu)","level":"1.2.1.5","depth":3,"path":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvRosNoeticUbuntu20.md","ref":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvRosNoeticUbuntu20.md","articles":[]},"previous":{"title":"실행환경 - 기본","level":"1.2.1.3","depth":3,"path":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvBasic.md","ref":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvBasic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix","prism","-highlight","youtube","anchor-navigation-ex-toc"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"styles-sass-fix":{},"youtube":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"showLevel":true,"mode":"float","showGoTop":true,"float":{"showLevelIcon":true,"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right"}},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1698025451569.css"}},"file":{"path":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvRosNoeticRaspbianOsBuster.md","mtime":"2023-10-23T01:41:58.505Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-10-23T01:44:10.853Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"실행환경 - ROS(RaspbianOS)","level":"1.2.1.4","depth":3,"next":{"title":"실행환경 - ROS(Ubuntu)","level":"1.2.1.5","depth":3,"path":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvRosNoeticUbuntu20.md","ref":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvRosNoeticUbuntu20.md","articles":[]},"previous":{"title":"실행환경 - 기본","level":"1.2.1.3","depth":3,"path":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvBasic.md","ref":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvBasic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["copy-code-button","theme-gestalt","-theme-default","styles-sass-fix","prism","-highlight","youtube","anchor-navigation-ex-toc"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"styles-sass-fix":{},"youtube":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":"https://withus-ai.github.io/","excludeDefaultStyles":true,"doNotHideChildrenChapters":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"showLevel":true,"mode":"float","showGoTop":true,"float":{"showLevelIcon":true,"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right"}},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1698038206629.css"}},"file":{"path":"With.AI/ZAiV/V1/ZAiV-AHP/installation/runningEnvRosNoeticRaspbianOsBuster.md","mtime":"2023-10-23T04:56:08.593Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-10-23T05:16:45.852Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>
